@@ -9,6 +9,7 @@ from collections import defaultdict
 from tqdm import tqdm
 import os
 from functools import lru_cache
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 os.environ["CUDA_VISIBLE_DEVICES"] = ""  # 确保不使用GPU
 print("Running on CPU")
@@ -40,6 +41,8 @@ class WikidataSession:
 class WikidataAPI:
     """优化后的Wikidata API客户端"""
     _session = None
+    BATCH_SIZE = 20  # 批处理大小
+    MAX_WORKERS = 4  # 最大并发线程数
     
     @classmethod
     def get_session(cls):
@@ -58,7 +61,6 @@ class WikidataAPI:
             "type": "item",
             "search": text
         }
-        print(f"Querying Wikidata for: {text}")
         try:
             response = WikidataAPI.get_session().get(WIKIDATA_API, params=params)
             response.raise_for_status()
@@ -67,6 +69,20 @@ class WikidataAPI:
         except Exception as e:
             print(f"Error getting entity ID for {text}: {str(e)}")
             return None
+    
+    @classmethod
+    def get_entity_ids_batch(cls, entities):
+        """批量获取实体ID"""
+        results = {}
+        with ThreadPoolExecutor(max_workers=cls.MAX_WORKERS) as executor:
+            futures = {
+                executor.submit(cls.get_entity_id, text, etype): (text, etype)
+                for text, etype in entities
+            }
+            for future in as_completed(futures):
+                text, etype = futures[future]
+                results[(text, etype)] = future.result()
+        return results
     
     @staticmethod
     @lru_cache(maxsize=500)
@@ -122,6 +138,20 @@ class WikidataAPI:
         except Exception as e:
             print(f"Error getting relations between {entity1_id} and {entity2_id}: {str(e)}")
             return None
+    
+    @classmethod
+    def get_relations_batch(cls, entity_pairs):
+        """批量获取实体间关系"""
+        results = {}
+        with ThreadPoolExecutor(max_workers=cls.MAX_WORKERS) as executor:
+            futures = {
+                executor.submit(cls.get_first_relation_between_entities, e1, e2): (e1, e2)
+                for e1, e2 in entity_pairs
+            }
+            for future in as_completed(futures):
+                e1, e2 = futures[future]
+                results[(e1, e2)] = future.result()
+        return results
 
 class DistantSupervisionRelationExtractor:
     """优化后的关系抽取器"""
@@ -133,10 +163,23 @@ class DistantSupervisionRelationExtractor:
     
     def get_entity_mapping(self, text, entity_type):
         """获取或缓存实体映射"""
-        cache_key = (text, entity_type)  # 使用元组作为键
+        cache_key = (text, entity_type)
         if cache_key not in self.cache["entities"]:
             self.cache["entities"][cache_key] = self.wikidata.get_entity_id(text, entity_type)
         return self.cache["entities"][cache_key]
+    
+    def get_entity_mappings_batch(self, entities):
+        """批量获取实体映射"""
+        # 先检查缓存
+        to_fetch = [(text, etype) for text, etype in entities 
+                   if (text, etype) not in self.cache["entities"]]
+        
+        if to_fetch:
+            # 批量查询缺失的实体
+            batch_results = self.wikidata.get_entity_ids_batch(to_fetch)
+            self.cache["entities"].update(batch_results)
+        
+        return {e: self.cache["entities"].get(e) for e in entities}
     
     def get_cached_relations(self, entity1_id, entity2_id):
         """获取或缓存实体间关系"""
@@ -145,31 +188,55 @@ class DistantSupervisionRelationExtractor:
             self.cache["relations"][cache_key] = self.wikidata.get_first_relation_between_entities(entity1_id, entity2_id)
         return [self.cache["relations"][cache_key]] if self.cache["relations"][cache_key] else []
     
+    def get_relations_batch(self, entity_pairs):
+        """批量获取实体间关系"""
+        # 先检查缓存
+        to_fetch = [(e1, e2) for e1, e2 in entity_pairs 
+                   if (e1, e2) not in self.cache["relations"]]
+        
+        if to_fetch:
+            # 批量查询缺失的关系
+            batch_results = self.wikidata.get_relations_batch(to_fetch)
+            self.cache["relations"].update(batch_results)
+        
+        return {pair: self.cache["relations"].get(pair) for pair in entity_pairs}
+    
     def extract_relations(self, entities):
-        """基于远程监督的关系抽取"""
+        """基于远程监督的关系抽取（批处理优化版）"""
         relations = []
         
-        # 预加载所有实体ID
-        entity_ids = {}
-        for text, entity_type in entities:
-            entity_ids[(text, entity_type)] = self.get_entity_mapping(text, entity_type)
+        # 1. 批量获取所有实体ID
+        entity_ids = self.get_entity_mappings_batch([(text, etype) for text, etype in entities])
         
-        # 检查实体间关系
+        # 2. 收集所有可能的实体对
+        entity_pairs = []
         for i in range(len(entities)):
             for j in range(i+1, len(entities)):
                 subj, subj_type = entities[i]
                 obj, obj_type = entities[j]
-                
                 subj_id = entity_ids.get((subj, subj_type))
                 obj_id = entity_ids.get((obj, obj_type))
-                
                 if subj_id and obj_id:
-                    for rel_id, rel_label in self.get_cached_relations(subj_id, obj_id):
-                        relations.append({
-                            "subject": subj,
-                            "relation": rel_label,
-                            "object": obj,
-                        })
+                    entity_pairs.append((subj_id, obj_id))
+        
+        # 3. 批量查询关系
+        relation_results = self.get_relations_batch(entity_pairs)
+        
+        # 4. 构建结果
+        for (subj_id, obj_id), rel in relation_results.items():
+            if rel:
+                rel_id, rel_label = rel
+                # 查找原始文本
+                subj_text = next(text for (text, etype), eid in entity_ids.items() 
+                                if eid == subj_id)
+                obj_text = next(text for (text, etype), eid in entity_ids.items() 
+                               if eid == obj_id)
+                relations.append({
+                    "subject": subj_text,
+                    "relation": rel_label,
+                    "object": obj_text
+                })
+                print(f"Extracted relation: {subj_text} - {rel_label} - {obj_text}")
         
         return relations
 
@@ -185,7 +252,7 @@ def main():
     ds_extractor = DistantSupervisionRelationExtractor(nlp)
     
     print("Loading entities from JSON...")
-    entities_data = load_entities_from_json("output/entities.json")[:20]
+    entities_data = load_entities_from_json("output/entities.json")[:5]
     
     results = []
     
