@@ -1,0 +1,566 @@
+[
+  {
+    "head": "China",
+    "relation": "verb_accuse",
+    "tail": "Taipei",
+    "sentence": "China on Thursday accused Taipei of spoiling the atmosphere for a resumption of talks across the Taiwan Strait with a visit to Ukraine by Taiwanese Vice President Lien Chan this week that infuriated Beijing ."
+  },
+  {
+    "head": "Syria",
+    "relation": "verb_accuse",
+    "tail": "Israel",
+    "sentence": "Syria accused Israel on Wednesday of launching a hysterical campaign against it after Israeli television reported that Damascus had recently test fired a missile ."
+  },
+  {
+    "head": "PUK",
+    "relation": "verb_have",
+    "tail": "Iraq",
+    "sentence": "PUK and Iraq 's Kurdistan Democratic Party ( KDP ) the two main Iraqi Kurdish factions , have had northern Iraq under their control since Iraqi forces were ousted from Kuwait in the 1991 Gulf War ."
+  },
+  {
+    "head": "Arafat",
+    "relation": "verb_meet",
+    "tail": "Peres",
+    "sentence": "Arafat to meet Peres in Gaza after flight ban ."
+  },
+  {
+    "head": "Saddam",
+    "relation": "verb_meet",
+    "tail": "Zhirinovsky",
+    "sentence": "Iraq 's Saddam meets Russia 's Zhirinovsky ."
+  },
+  {
+    "head": "Zhirinovsky",
+    "relation": "verb_visit",
+    "tail": "Iraq",
+    "sentence": "Zhirinovsky visited Iraq twice in 1995 ."
+  },
+  {
+    "head": "Australia",
+    "relation": "verb_face",
+    "tail": "Croatia",
+    "sentence": "Australia face Croatia in the world group qualifying tie on clay from September 20-22 ."
+  },
+  {
+    "head": "Canadian",
+    "relation": "verb_break",
+    "tail": "Muster",
+    "sentence": "The lanky Canadian broke Muster at 4-3 in the first set and 5-5 in the second before ending the match on his third match point when the Austrian hit a service return long ."
+  },
+  {
+    "head": "Palestinians",
+    "relation": "verb_accuse",
+    "tail": "PA",
+    "sentence": "Palestinians accuse PA of banning books ."
+  },
+  {
+    "head": "Taha",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "\" There is no strategy to ban books or to suppress freedom of expression in any form whatsoever , \" Taha told Reuters ."
+  },
+  {
+    "head": "Erdmann",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "\" The Russian side confirmed that the ceasefire is in place and they will keep to it , \" Erdmann told Reuters after speaking by telephone to Ischinger , who had met the officials on a two-day visit to Moscow ."
+  },
+  {
+    "head": "India",
+    "relation": "verb_accuse",
+    "tail": "Pakistan",
+    "sentence": "India has often accused Pakistan of abetting militancy in the valley , a charge Islamabad has always denied ."
+  },
+  {
+    "head": "Mutola",
+    "relation": "verb_push",
+    "tail": "Masterkova",
+    "sentence": "Former world 800 champion Mutola pushed Masterkova all the way , finishing second in 2:29.66 ."
+  },
+  {
+    "head": "Mitchell",
+    "relation": "verb_beat",
+    "tail": "Bailey",
+    "sentence": "Mitchell also beat world and Olympic champion Bailey at the most lucrative meeting in the sport in Zurich last week ."
+  },
+  {
+    "head": "Taibe",
+    "relation": "verb_meet",
+    "tail": "Betar",
+    "sentence": "Two weeks ago Taibe , coached by Pole Wojtek Lazarek , met Betar , a club closely associated with the right-wing Likud party , for the first time in a Cup match in Jerusalem ."
+  },
+  {
+    "head": "Juventus",
+    "relation": "verb_meet",
+    "tail": "United",
+    "sentence": "Juventus meet United in Turin on September 11 , with the return match at Old Trafford on November 20 ."
+  },
+  {
+    "head": "Tsang",
+    "relation": "verb_visit",
+    "tail": "Indonesia",
+    "sentence": "HK 's Tsang to visit Indonesia , New Zealand ."
+  },
+  {
+    "head": "Tsang",
+    "relation": "verb_meet",
+    "tail": "Suharto",
+    "sentence": "In Jakarta , Tsang will meet President Suharto , Minister of Finance Mar'ie Muhammad , Minister of Foreign Affairs Ali Alatas and Minister of Trade and Industry Tungky Ariwibowo ."
+  },
+  {
+    "head": "Ibrahim",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "Ibrahim told Reuters by telephone from his embassy office in Amman that he \" had not been notified \" of any explusion order ."
+  },
+  {
+    "head": "Jordan",
+    "relation": "verb_accuse",
+    "tail": "Iraq",
+    "sentence": "Jordan has accused Iraq and a local pro-Baghdad party for the country 's worst unrest in seven years which erupted after it almost doubled the prices of bread last week under radical economic reforms agreed with the International Monetary Fund ."
+  },
+  {
+    "head": "Birnberg",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "Birnberg told Reuters that the challenge to the injunction would be delayed until Stenning was released ."
+  },
+  {
+    "head": "Williams",
+    "relation": "verb_thrust",
+    "tail": "Essex",
+    "sentence": "Williams thrust Essex on course for success by dispatching Matt Windows and Andrew Symonds in his second over , before Ilott removed Dominic Hewson and Tim Hancock to reduce Gloucestershire to 17 for four at one stage ."
+  },
+  {
+    "head": "Leicestershire",
+    "relation": "verb_have",
+    "tail": "Hampshire",
+    "sentence": "Fourth-placed Leicestershire had Hampshire on the ropes at Leicester before rain intervened ."
+  },
+  {
+    "head": "Nijmeh",
+    "relation": "verb_beat",
+    "tail": "Nasr",
+    "sentence": "Soccer - Nijmeh beat Nasr 1-0 ."
+  },
+  {
+    "head": "Nijmeh",
+    "relation": "verb_beat",
+    "tail": "Nasr",
+    "sentence": "Nijmeh of Lebanon beat Nasr of Saudi Arabia 1-0 ( halftime 1-0 ) in their Asian club championship second round first leg tie on Saturday ."
+  },
+  {
+    "head": "MDS",
+    "relation": "verb_name",
+    "tail": "Khalfallah",
+    "sentence": "To replace Moada , the MDS after the trial named Khalfallah as \" coordinator \" but Ismail Boulahya , the last of the MDS founding members still politically active , claimed the title of president , causing a new split within the movement ."
+  },
+  {
+    "head": "Iran",
+    "relation": "verb_accuse",
+    "tail": "Iraq",
+    "sentence": "Iran accuses Iraq of ceasefire violations ."
+  },
+  {
+    "head": "Togo",
+    "relation": "verb_beat",
+    "tail": "Congo",
+    "sentence": "Togo beat Congo 1-0 ( halftime 0-0 )"
+  },
+  {
+    "head": "Shkirko",
+    "relation": "verb_tell",
+    "tail": "Interfax",
+    "sentence": "In Grozny , Shkirko told Interfax he was suspending the pullout of troops from the capital until weapons seized by the Chechens were returned ."
+  },
+  {
+    "head": "Weizman",
+    "relation": "verb_invite",
+    "tail": "Arafat",
+    "sentence": "- Israeli President Weizman invited Palestinian President Arafat to meet him at his private residence ."
+  },
+  {
+    "head": "Levy",
+    "relation": "verb_visit",
+    "tail": "Egypt",
+    "sentence": "- Foreign Minister Levy to visit Egypt soon ."
+  },
+  {
+    "head": "Essex",
+    "relation": "verb_beat",
+    "tail": "Gloucestershire",
+    "sentence": "At Colchester : Essex beat Gloucestershire by an innings and"
+  },
+  {
+    "head": "Northamptonshire",
+    "relation": "verb_beat",
+    "tail": "Sussex",
+    "sentence": "At Northampton : Northamptonshire beat Sussex by 6 wickets ."
+  },
+  {
+    "head": "Pakistan",
+    "relation": "verb_beat",
+    "tail": "England",
+    "sentence": "Pakistan beat England by nine wickets on the fifth day of the third and final test at The Oval on Monday to win the series 2-0 ."
+  },
+  {
+    "head": "Maslova",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "Maslova told Reuters she was not an expert in sports medicine , but said it was too early to judge Popov 's chances of returning to competitive swimming ."
+  },
+  {
+    "head": "Honduras",
+    "relation": "verb_beat",
+    "tail": "Cuba",
+    "sentence": "Honduras beat Cuba 4-0"
+  },
+  {
+    "head": "AUSTRALIA",
+    "relation": "verb_beat",
+    "tail": "ZIMBABWE",
+    "sentence": "CRICKET - AUSTRALIA BEAT ZIMBABWE BY 125 RUNS IN ONE-DAY MATCH ."
+  },
+  {
+    "head": "Australia",
+    "relation": "verb_beat",
+    "tail": "Zimbabwe",
+    "sentence": "Australia beat Zimbabwe by 125 runs in the first match of the Singer World Series one-day ( 50 overs ) cricket tournament on Monday ."
+  },
+  {
+    "head": "Interfax",
+    "relation": "verb_quote",
+    "tail": "Yastrezhembsky",
+    "sentence": "\" One must give B. Yeltsin a chance to rest and recover his health after the elections , \" Interfax quoted Yastrezhembsky as saying ."
+  },
+  {
+    "head": "Hashimoto",
+    "relation": "verb_leave",
+    "tail": "Brazil",
+    "sentence": "Japan 's Hashimoto leaves Brazil for Peru ."
+  },
+  {
+    "head": "Egypt",
+    "relation": "verb_press",
+    "tail": "Britain",
+    "sentence": "Egypt to press Britain over Islamist conference ."
+  },
+  {
+    "head": "Wijffels",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "Maybe it will be in single-digits , \" Wijffels told Reuters ."
+  },
+  {
+    "head": "Lupu",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "\" Cozma 's blow was not too painful because I 'm a tall man , \" Lupu told Reuters on Tuesday ."
+  },
+  {
+    "head": "GIANTS",
+    "relation": "verb_edge",
+    "tail": "PHILLIES",
+    "sentence": "BASEBALL - GIANTS EDGE PHILLIES 1-0 ."
+  },
+  {
+    "head": "VanLandingham",
+    "relation": "verb_limit",
+    "tail": "Phillies",
+    "sentence": "VanLandingham ( 8-13 ) , who entered the game with one complete game in the first 56 starts of his career , limited the Phillies to two hits and two walks with four strikeouts ."
+  },
+  {
+    "head": "Marseille",
+    "relation": "verb_hold",
+    "tail": "Auxerre",
+    "sentence": "Former European champions Marseille held French champions Auxerre to a goalless draw in a lacklustre league match on Tuesday ."
+  },
+  {
+    "head": "Lens",
+    "relation": "verb_host",
+    "tail": "Montpellier",
+    "sentence": "Lens , who have won all their three league matches so far , host Montpellier on Wednesday night ."
+  },
+  {
+    "head": "Moura",
+    "relation": "verb_provoke",
+    "tail": "Cyprien",
+    "sentence": "\" Moura physically and verbally provoked Cyprien during the match ."
+  },
+  {
+    "head": "Slovenia",
+    "relation": "verb_target",
+    "tail": "EU",
+    "sentence": "Slovenia and Poland target EU , NATO membership ."
+  },
+  {
+    "head": "Albania",
+    "relation": "verb_charge",
+    "tail": "Briton",
+    "sentence": "Albania charges Briton with child sex abuse ."
+  },
+  {
+    "head": "Havel",
+    "relation": "verb_tour",
+    "tail": "Brazil",
+    "sentence": "Czech Republic 's Havel to tour Brazil in September ."
+  },
+  {
+    "head": "Rifkind",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "\" People who wish to hold conferences of course do n't need to seek permission from the government in Britain , \" Rifkind , in Pakistan for a visit , told Reuters . \""
+  },
+  {
+    "head": "Amrollah",
+    "relation": "verb_quote",
+    "tail": "Rohrabacher",
+    "sentence": "\" We are certainly serious more than before to find a solution to the Afghan problem and support every U.N. plan , \" Amrollah quoted Rohrabacher as saying ."
+  },
+  {
+    "head": "Khadga",
+    "relation": "verb_challenge",
+    "tail": "communists",
+    "sentence": "In a speech in parliament on Tuesday , Khadga challenged the Maoist communists to \" win the people 's confidence \" and win election to parliament ."
+  },
+  {
+    "head": "Hasina",
+    "relation": "verb_accuse",
+    "tail": "BNP",
+    "sentence": "Hasina , speaking to a group of engineers in Dhaka on Monday , accused the BNP of resorting to \" terrorism \" as part of its plan to create instability and chaos in the country ."
+  },
+  {
+    "head": "China",
+    "relation": "verb_thank",
+    "tail": "Gabon",
+    "sentence": "China thanks Gabon for support on human rights ."
+  },
+  {
+    "head": "China",
+    "relation": "verb_thank",
+    "tail": "Gabon",
+    "sentence": "China has publicly thanked Gabon for its strong support at the United Nations Human Rights Commission , where Beijing has come under attack from Western nations for its human rights record ."
+  },
+  {
+    "head": "Neagle",
+    "relation": "verb_beat",
+    "tail": "Braves",
+    "sentence": "Neagle ( 14-6 ) beat the Braves for the third time this season , allowing two runs and six hits in eight innings ."
+  },
+  {
+    "head": "Robson",
+    "relation": "verb_praise",
+    "tail": "Atletico",
+    "sentence": "Robson praised Atletico after the game , which was played in the Community of Madrid athletic stadium because of pitch problems at the Vicente Calderon ground ."
+  },
+  {
+    "head": "AJAX",
+    "relation": "verb_sign",
+    "tail": "GABRICH",
+    "sentence": "SOCCER - AJAX SIGN ARGENTINE STRIKER GABRICH ."
+  },
+  {
+    "head": "Fiorentina",
+    "relation": "verb_beat",
+    "tail": "Cosenza",
+    "sentence": "Cup holders Fiorentina easily beat Cosenza 3-1 while European Cup holders Juventus also cruised through with a 2-0 win at small southern club Fidelis Andria ."
+  },
+  {
+    "head": "LANKA",
+    "relation": "verb_beat",
+    "tail": "INDIA",
+    "sentence": "CRICKET - SRI LANKA BEAT INDIA BY 9 WICKETS IN ONE-DAY MATCH ."
+  },
+  {
+    "head": "ENAP",
+    "relation": "verb_buy",
+    "tail": "Oriente",
+    "sentence": "Chile 's ENAP buys Oriente , Escravos crude for Oct ."
+  },
+  {
+    "head": "Albania",
+    "relation": "verb_ask",
+    "tail": "Greece",
+    "sentence": "Albania asks Greece to explain deportations ."
+  },
+  {
+    "head": "Shehu",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "\" The Foreign Ministry is trying to find out from the Greek embassy why Albanian refugees have been deported from Greece , \" Shehu told Reuters ."
+  },
+  {
+    "head": "Arafat",
+    "relation": "verb_blast",
+    "tail": "Israel",
+    "sentence": "Arafat had earlier blasted Israel saying its policies amounted to a declaration of war against the Palestinian people ."
+  },
+  {
+    "head": "Dole",
+    "relation": "verb_blast",
+    "tail": "Clinton",
+    "sentence": "Dole blasts Clinton for ignoring teen drug use ."
+  },
+  {
+    "head": "Swiss",
+    "relation": "verb_arrest",
+    "tail": "Rwandan",
+    "sentence": "Swiss arrest Rwandan on genocide suspicion ."
+  },
+  {
+    "head": "Sharif",
+    "relation": "verb_accuse",
+    "tail": "Bhutto",
+    "sentence": "Sharif accused Bhutto of corruption and nepotism , charges she has denied in the past ."
+  },
+  {
+    "head": "Simitis",
+    "relation": "verb_blame",
+    "tail": "ND",
+    "sentence": "Simitis blamed ND for the low absorption rate of EU funds and said the socialists will increase farmers ' pensions , combat tax evasion and accelerate GDP growth rates to 4.0 percent in a few years ."
+  },
+  {
+    "head": "Arafat",
+    "relation": "verb_quote",
+    "tail": "Ross",
+    "sentence": "\" No , they have good intentions , \" Arafat quoted Ross as saying ."
+  },
+  {
+    "head": "Palestinians",
+    "relation": "verb_press",
+    "tail": "Israel",
+    "sentence": "Palestinians have been pressing Israel to carry out a long-delayed partial troop pullout from the flashpoint West Bank city of Hebron agreed by the previous Labour government ."
+  },
+  {
+    "head": "Levy",
+    "relation": "verb_meet",
+    "tail": "Mubarak",
+    "sentence": "Israel 's Levy to meet Mubarak in Egypt ."
+  },
+  {
+    "head": "Lamm",
+    "relation": "verb_endorse",
+    "tail": "CNN",
+    "sentence": "Lamm will not endorse Perot for Reform ticket-CNN ."
+  },
+  {
+    "head": "Iran",
+    "relation": "verb_ask",
+    "tail": "Bonn",
+    "sentence": "Iran asks Bonn to extradite ex-president Banisadr ."
+  },
+  {
+    "head": "Banisadr",
+    "relation": "verb_anger",
+    "tail": "Tehran",
+    "sentence": "Banisadr angered Tehran last week by accusing top Iranian leaders of ordering the assassination of Iranian Kurdish leaders in a Berlin restaurant in 1992 ."
+  },
+  {
+    "head": "Iran",
+    "relation": "verb_warn",
+    "tail": "Germany",
+    "sentence": "Iran has warned Germany that bilateral relations could suffer if it pays heed to the testimony of Banisadr , an architect of Iran 's Islamic revolution who has been a sworn enemy of Tehran since he fell from favour after a year as president ."
+  },
+  {
+    "head": "ENGLAND",
+    "relation": "verb_beat",
+    "tail": "PAKISTAN",
+    "sentence": "CRICKET - ENGLAND BEAT PAKISTAN IN FIRST ONE-DAYER ."
+  },
+  {
+    "head": "England",
+    "relation": "verb_beat",
+    "tail": "Pakistan",
+    "sentence": "England beat Pakistan by five wickets to win the first one-day ( 50 overs-a-side ) international at Old Trafford on Thursday ."
+  },
+  {
+    "head": "OLYMPIAKOS",
+    "relation": "verb_beat",
+    "tail": "DINAMO",
+    "sentence": "BASKETBALL - OLYMPIAKOS BEAT DINAMO 69-60 ."
+  },
+  {
+    "head": "Olympiakos",
+    "relation": "verb_beat",
+    "tail": "Dinamo",
+    "sentence": "Olympiakos of Greece beat Russia 's Dinamo 69-60 ( halftime 35-23 ) in the third match of an international basketball tournament on Thursday , qualifying for the finals ."
+  },
+  {
+    "head": "Partizan",
+    "relation": "verb_beat",
+    "tail": "Benetton",
+    "sentence": "Partizan beat Benetton 97-94 ( halftime 39-32 ) ."
+  },
+  {
+    "head": "Ikimi",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "We cannot object to people wanting to visit Nigeria , \" Ikimi told Reuters by telephone from the capital Abuja ."
+  },
+  {
+    "head": "Serbs",
+    "relation": "verb_claim",
+    "tail": "Kosovo",
+    "sentence": "The Serbs , who make up 10 percent of the province 's 1.8 million people , claim Kosovo as the cradle of their culture ."
+  },
+  {
+    "head": "Clinton",
+    "relation": "verb_lead",
+    "tail": "Dole",
+    "sentence": "Clinton is leading Dole by as much as 15 points according to some polls ."
+  },
+  {
+    "head": "Kabariti",
+    "relation": "verb_meet",
+    "tail": "Arafat",
+    "sentence": "Jordanian PM Kabariti meets Arafat in West Bank ."
+  },
+  {
+    "head": "Demel",
+    "relation": "verb_tell",
+    "tail": "Reuters",
+    "sentence": "\" We do not expect any burden on our 1996 results from currency markets , \" Demel told Reuters in an interview ."
+  },
+  {
+    "head": "Algeria",
+    "relation": "verb_fault",
+    "tail": "Britain",
+    "sentence": "Algeria faults Britain over Islamists gathering ."
+  },
+  {
+    "head": "Algeria",
+    "relation": "verb_attack",
+    "tail": "Britain",
+    "sentence": "Algeria , fighting a vicious war against Moslem fundamentalist guerrillas , attacked Britain on Wednesday for allowing Islamist groups to meet in London ."
+  },
+  {
+    "head": "AUSTRIA",
+    "relation": "verb_beat",
+    "tail": "SCOTLAND",
+    "sentence": "SOCCER - AUSTRIA BEAT SCOTLAND 4-0 IN EUROPEAN UNDER-21 MATCH ."
+  },
+  {
+    "head": "Austria",
+    "relation": "verb_beat",
+    "tail": "Scotland",
+    "sentence": "Austria beat Scotland 4-0 ( halftime 3-0 ) in a European under-21 championship match on Friday ."
+  },
+  {
+    "head": "Faure",
+    "relation": "verb_beat",
+    "tail": "Dubnicoff",
+    "sentence": "Faure beat Dubnicoff 2-0 ( 12.112 / 12.246 )"
+  },
+  {
+    "head": "Ballanger",
+    "relation": "verb_beat",
+    "tail": "Neumann",
+    "sentence": "Ballanger beat Neumann 2-0 ( 11.959 / 12.225 )"
+  },
+  {
+    "head": "KOMBOUARE",
+    "relation": "verb_join",
+    "tail": "ABERDEEN",
+    "sentence": "SOCCER - FRENCH DEFENDER KOMBOUARE JOINS ABERDEEN ."
+  }
+]

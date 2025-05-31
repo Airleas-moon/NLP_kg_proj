@@ -1,0 +1,28 @@
+[
+  {
+    "sentence": "EU rejects German call to boycott British lamb .",
+    "relations": [
+      {
+        "subject": "EU",
+        "subject_type": "ORG",
+        "relation": "official language",
+        "relation_id": "P37",
+        "object": "German",
+        "object_type": "NORP"
+      }
+    ]
+  },
+  {
+    "sentence": "Germany 's representative to the European Union 's veterinary committee Werner Zwingmann said on Wednesday consumers should buy sheepmeat from countries other than Britain until the scientific advice was clearer .",
+    "relations": [
+      {
+        "subject": "Germany",
+        "subject_type": "GPE",
+        "relation": "diplomatic relation",
+        "relation_id": "P530",
+        "object": "Britain",
+        "object_type": "GPE"
+      }
+    ]
+  }
+]
