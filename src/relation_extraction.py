@@ -5,16 +5,18 @@ from pathlib import Path
 import requests
 from collections import defaultdict
 from tqdm import tqdm
-import torch
-spacy.require_gpu() 
-print("CUDA Available:", torch.cuda.is_available())
-print(torch.__version__)  # PyTorch版本
-print(torch.version.cuda) 
-nlp = spacy.load("en_core_web_trf", 
+import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = ""  # 确保不使用GPU
+print("Running on CPU")
+
+# 加载模型（使用更轻量级的sm模型而不是trf）
+nlp = spacy.load("en_core_web_sm", 
                  exclude=["tagger", "parser", "attribute_ruler", "lemmatizer"])
-nlp.enable_pipe("transformer") 
+
 # 知识库API配置
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
+
 class WikidataAPI:
     @staticmethod
     def get_entity_id(text, entity_type):
@@ -31,7 +33,8 @@ class WikidataAPI:
             response = requests.get(WIKIDATA_API, params=params, timeout=10)
             results = response.json().get("search", [])
             return results[0]["id"] if results else None
-        except:
+        except Exception as e:
+            print(f"Error getting entity ID for {text}: {str(e)}")
             return None
     
     @staticmethod
@@ -48,35 +51,41 @@ class WikidataAPI:
             response = requests.get(WIKIDATA_API, params=params)
             label = response.json()["entities"][property_id]["labels"]["en"]["value"]
             return label
-        except:
+        except Exception as e:
+            print(f"Error getting label for property {property_id}: {str(e)}")
             return property_id  # 如果获取失败，返回原始ID
     
     @staticmethod
-    def get_relations_between_entities(entity1_id, entity2_id):
-        """获取两个实体间的所有关系（带标签）"""
+    def get_first_relation_between_entities(entity1_id, entity2_id):
+        """只获取两个实体间的第一个关系（优化性能）"""
         query = """
         SELECT ?relation ?relationLabel WHERE {
           wd:%s ?relation wd:%s.
           SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
         }
+        LIMIT 1
         """ % (entity1_id, entity2_id)
       
         url = "https://query.wikidata.org/sparql"
         try:
-            response = requests.get(url, params={"format": "json", "query": query})
-            relations = []
-            for item in response.json().get("results", {}).get("bindings", []):
-                relation_id = item.get("relation", {}).get("value", "").split("/")[-1]
+            response = requests.get(url, params={"format": "json", "query": query}, timeout=15)
+            bindings = response.json().get("results", {}).get("bindings", [])
+            if bindings:
+                item = bindings[0]
+                relation_uri = item.get("relation", {}).get("value", "")
+                relation_id = relation_uri.split("/")[-1]
                 relation_label = item.get("relationLabel", {}).get("value", "")
               
                 # 如果SPARQL查询没有返回标签，再单独获取
                 if not relation_label or relation_label.startswith("http"):
                     relation_label = WikidataAPI.get_property_label(relation_id)
               
-                relations.append((relation_id, relation_label))
-            return relations
-        except:
-            return []
+                return (relation_id, relation_label)
+            return None
+        except Exception as e:
+            print(f"Error getting relations between {entity1_id} and {entity2_id}: {str(e)}")
+            return None
+
 class DistantSupervisionRelationExtractor:
     def __init__(self, nlp):
         self.nlp = nlp
@@ -91,11 +100,11 @@ class DistantSupervisionRelationExtractor:
         return self.cache["entities"][text]
   
     def get_cached_relations(self, entity1_id, entity2_id):
-        """获取或缓存实体间关系"""
+        """获取或缓存实体间关系（只获取第一个关系）"""
         cache_key = f"{entity1_id}_{entity2_id}"
         if cache_key not in self.cache["relations"]:
-            self.cache["relations"][cache_key] = self.wikidata.get_relations_between_entities(entity1_id, entity2_id)
-        return self.cache["relations"][cache_key]
+            self.cache["relations"][cache_key] = self.wikidata.get_first_relation_between_entities(entity1_id, entity2_id)
+        return [self.cache["relations"][cache_key]] if self.cache["relations"][cache_key] else []
   
     def extract_relations(self, entities):
         """基于远程监督的关系抽取（带友好标签）"""
@@ -113,32 +122,27 @@ class DistantSupervisionRelationExtractor:
                     wikidata_relations = self.get_cached_relations(subj_id, obj_id)
                   
                     for rel_id, rel_label in wikidata_relations:
-                        # 确保标签不是URL格式
-                        if rel_label.startswith("http"):
-                            rel_label = rel_id  # 回退到显示属性ID
-                      
                         relations.append({
                             "subject": subj,
-                            "subject_type": subj_type,
-                            "relation": rel_label,  # 现在这里是友好标签
-                            "relation_id": rel_id,
+                            "relation": rel_label,
                             "object": obj,
-                            "object_type": obj_type
                         })
       
         return relations
+
 def load_entities_from_json(file_path):
     """加载entities.json文件中的实体"""
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return data
+
 def main():
     # 初始化远程监督抽取器
     print("Initializing extractor...")
     ds_extractor = DistantSupervisionRelationExtractor(nlp)
   
     print("Loading entities from JSON...")
-    entities_data = load_entities_from_json("output/entities.json")
+    entities_data = load_entities_from_json("output/entities.json")[:1]
   
     results = []
   
@@ -146,9 +150,7 @@ def main():
         sentence = entry["sentence"]
         entities = entry["entities"]
       
-        print(f"\nProcessing sentence: {sentence[:50]}...")
         relations = ds_extractor.extract_relations(entities)
-        print(f"Found {len(relations)} relations")
       
         if relations:
             results.append({
@@ -159,7 +161,8 @@ def main():
         else:
             results.append({
                 "sentence": sentence,
-                "entities": entities
+                "entities": entities,
+                "relations": []
             })
   
     # 保存结果
@@ -167,5 +170,8 @@ def main():
     output_dir.mkdir(exist_ok=True)
     with open(output_dir / "relations_with_entities.json", 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
+    
+    print(f"Processing completed. Results saved to {output_dir / 'relations_with_entities.json'}")
+
 if __name__ == "__main__":
     main()

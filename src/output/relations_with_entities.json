@@ -1,27 +1,25 @@
 [
   {
-    "text": "EU rejects German call to boycott British lamb .",
+    "sentence": "EU rejects German call to boycott British lamb .",
     "entities": [
-      {
-        "text": "EU",
-        "type": "ORG"
-      },
-      {
-        "text": "German",
-        "type": "NORP"
-      },
-      {
-        "text": "British",
-        "type": "NORP"
-      }
+      [
+        "EU",
+        "ORG"
+      ],
+      [
+        "German",
+        "MISC"
+      ],
+      [
+        "British",
+        "MISC"
+      ]
     ],
     "relations": [
       {
         "subject": "EU",
-        "subject_type": "ORG",
-        "relation": "http://www.wikidata.org/prop/direct/P37",
-        "object": "German",
-        "object_type": "NORP"
+        "relation": "official language",
+        "object": "German"
       }
     ]
   }

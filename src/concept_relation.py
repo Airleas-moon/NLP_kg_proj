@@ -36,27 +36,29 @@ class WikidataAPI:
             return None
 
     @staticmethod
-    def get_relations_between_entities(entity1_id, entity2_id):
-        """获取两个实体间的所有关系"""
+    def get_first_relation_between_entities(entity1_id, entity2_id):
+        """只获取两个实体间的第一个关系（加速版）"""
         query = """
         SELECT ?relation ?relationLabel WHERE {
           wd:%s ?relation wd:%s.
           SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
         }
+        LIMIT 1
         """ % (entity1_id, entity2_id)
-      
         url = "https://query.wikidata.org/sparql"
         try:
-            response = requests.get(url, params={"format": "json", "query": query}, timeout=15)
-            relations = []
-            for item in response.json().get("results", {}).get("bindings", []):
-                relation_id = item.get("relation", {}).get("value", "").split("/")[-1]
-                relation_label = item.get("relationLabel", {}).get("value", "")
-                relations.append((relation_id, relation_label))
-            return relations
+            response = requests.get(url, params={"format": "json", "query": query}, timeout=10)
+            bindings = response.json().get("results", {}).get("bindings", [])
+            if bindings:
+                item = bindings[0]
+                relation_uri = item.get("relation", {}).get("value", "")
+                relation_id = relation_uri.split("/")[-1]
+                relation_label = item.get("relationLabel", {}).get("value", relation_id)
+                return (relation_id, relation_label)
+            return None
         except Exception as e:
-            print(f"Error fetching relations between {entity1_id} and {entity2_id}: {str(e)}")
-            return []
+            print(f"Error fetching first relation between {entity1_id} and {entity2_id}: {str(e)}")
+            return None
 
 class DistantSupervisionRelationExtractor:
     def __init__(self, nlp):
@@ -79,27 +81,22 @@ class DistantSupervisionRelationExtractor:
         return self.cache["relations"][cache_key]
   
     def extract_relations(self, doc):
-        """基于远程监督的关系抽取"""
+        """基于远程监督的关系抽取（只获取第一个关系）"""
         relations = []
-      
-        # 首先提取所有实体
         entities = [(ent.text, ent.label_) for ent in doc.ents]
-      
-        # 检查所有实体对
         for i in range(len(entities)):
             for j in range(i+1, len(entities)):
                 subj, subj_type = entities[i]
                 obj, obj_type = entities[j]
-              
-                # 获取Wikidata实体ID
+                
                 subj_id = self.get_entity_mapping(subj, subj_type)
                 obj_id = self.get_entity_mapping(obj, obj_type)
-              
+                
                 if subj_id and obj_id:
-                    # 查询两个实体间的关系
-                    wikidata_relations = self.get_cached_relations(subj_id, obj_id)
-                  
-                    for rel_id, rel_label in wikidata_relations:
+                    # 只查询第一个关系
+                    result = self.wikidata.get_first_relation_between_entities(subj_id, obj_id)
+                    if result:
+                        rel_id, rel_label = result
                         relations.append({
                             "subject": subj,
                             "subject_type": subj_type,
@@ -107,7 +104,6 @@ class DistantSupervisionRelationExtractor:
                             "object": obj,
                             "object_type": obj_type,
                         })
-      
         return relations
 
 def process_conll_file(file_path):
@@ -135,7 +131,7 @@ def main():
     ds_extractor = DistantSupervisionRelationExtractor(nlp)
   
     # 处理训练数据
-    sentences = process_conll_file("../data/raw/train.txt")[:2]  # 测试少量数据
+    sentences = process_conll_file("../data/raw/train.txt")[:5]  # 测试少量数据
     results = []
     
     # 添加进度条
