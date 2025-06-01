@@ -10,9 +10,23 @@ from tqdm import tqdm
 import os
 from functools import lru_cache
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import time
+from threading import Lock
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('wikidata_processing.log'),
+        logging.StreamHandler()
+    ]
+)
 
 os.environ["CUDA_VISIBLE_DEVICES"] = ""  # 确保不使用GPU
-print("Running on CPU")
+logger = logging.getLogger(__name__)
+logger.info("Running on CPU")
 
 # 加载模型（使用更轻量级的sm模型而不是trf）
 nlp = spacy.load("en_core_web_sm", 
@@ -22,21 +36,78 @@ nlp = spacy.load("en_core_web_sm",
 WIKIDATA_API = "https://www.wikidata.org/w/api.php"
 SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
 
+class RateLimiter:
+    """请求速率限制器"""
+    _instance = None
+    _lock = Lock()
+    
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super().__new__(cls)
+                    cls._instance._init_limiter()
+        return cls._instance
+    
+    def _init_limiter(self):
+        self.last_request_time = 0
+        self.min_interval = 1.2  # 秒 (略高于Wikidata的1请求/秒限制)
+        self.lock = Lock()
+    
+    def wait_for_next_request(self):
+        with self.lock:
+            elapsed = time.time() - self.last_request_time
+            if elapsed < self.min_interval:
+                sleep_time = self.min_interval - elapsed
+                logger.debug(f"Rate limiting: sleeping for {sleep_time:.2f}s")
+                time.sleep(sleep_time)
+            self.last_request_time = time.time()
+
 class WikidataSession:
     """自定义Wikidata会话管理，包含自动重试和持久化连接"""
     def __init__(self):
         self.session = requests.Session()
+        self.rate_limiter = RateLimiter()
+        
         # 配置自动重试策略
         retry_strategy = Retry(
             total=3,
-            backoff_factor=1,
-            status_forcelist=[408, 429, 500, 502, 503, 504]
+            backoff_factor=1,  # 增加退避因子
+            status_forcelist=[408, 429, 500, 502, 503, 504],
+            allowed_methods=["HEAD", "GET", "OPTIONS"]
         )
-        adapter = HTTPAdapter(max_retries=retry_strategy)
+        adapter = HTTPAdapter(
+            max_retries=retry_strategy,
+            pool_maxsize=4,  # 限制连接池大小
+            pool_block=True  # 启用阻塞模式
+        )
         self.session.mount("https://", adapter)
+        
+        # 设置用户代理(遵守Wikidata要求)
+        self.session.headers.update({
+            'User-Agent': 'AcademicResearchBot/1.0 (your_email@example.com)',
+            'Accept': 'application/json'
+        })
     
     def get(self, url, params=None, timeout=10):
-        return self.session.get(url, params=params, timeout=timeout)
+        """带速率限制的GET请求"""
+        self.rate_limiter.wait_for_next_request()
+        
+        try:
+            response = self.session.get(url, params=params, timeout=timeout)
+            response.raise_for_status()
+            
+            # 检查Wikidata返回的错误
+            if response.status_code == 429:
+                retry_after = int(response.headers.get('Retry-After', 30))
+                logger.warning(f"Rate limited. Waiting {retry_after} seconds")
+                time.sleep(retry_after)
+                return self.get(url, params, timeout)
+                
+            return response
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Request failed: {str(e)}")
+            raise
 
 class WikidataAPI:
     """优化后的Wikidata API客户端"""
@@ -63,16 +134,15 @@ class WikidataAPI:
         }
         try:
             response = WikidataAPI.get_session().get(WIKIDATA_API, params=params)
-            response.raise_for_status()
             results = response.json().get("search", [])
             return results[0]["id"] if results else None
         except Exception as e:
-            print(f"Error getting entity ID for {text}: {str(e)}")
+            logger.error(f"Error getting entity ID for {text}: {str(e)}")
             return None
     
     @classmethod
     def get_entity_ids_batch(cls, entities):
-        """批量获取实体ID"""
+        """批量获取实体ID（带速率限制）"""
         results = {}
         with ThreadPoolExecutor(max_workers=cls.MAX_WORKERS) as executor:
             futures = {
@@ -81,7 +151,11 @@ class WikidataAPI:
             }
             for future in as_completed(futures):
                 text, etype = futures[future]
-                results[(text, etype)] = future.result()
+                try:
+                    results[(text, etype)] = future.result()
+                except Exception as e:
+                    logger.error(f"Error processing entity {text}: {str(e)}")
+                    results[(text, etype)] = None
         return results
     
     @staticmethod
@@ -97,11 +171,10 @@ class WikidataAPI:
         }
         try:
             response = WikidataAPI.get_session().get(WIKIDATA_API, params=params)
-            response.raise_for_status()
             label = response.json()["entities"][property_id]["labels"]["en"]["value"]
             return label
         except Exception as e:
-            print(f"Error getting label for property {property_id}: {str(e)}")
+            logger.error(f"Error getting label for property {property_id}: {str(e)}")
             return property_id
     
     @staticmethod
@@ -119,10 +192,8 @@ class WikidataAPI:
         try:
             response = WikidataAPI.get_session().get(
                 SPARQL_ENDPOINT,
-                params={"format": "json", "query": query},
-                timeout=15
+                params={"format": "json", "query": query}
             )
-            response.raise_for_status()
             bindings = response.json().get("results", {}).get("bindings", [])
             if bindings:
                 item = bindings[0]
@@ -136,12 +207,12 @@ class WikidataAPI:
                 return (relation_id, relation_label)
             return None
         except Exception as e:
-            print(f"Error getting relations between {entity1_id} and {entity2_id}: {str(e)}")
+            logger.error(f"Error getting relations between {entity1_id} and {entity2_id}: {str(e)}")
             return None
     
     @classmethod
     def get_relations_batch(cls, entity_pairs):
-        """批量获取实体间关系"""
+        """批量获取实体间关系（带速率限制）"""
         results = {}
         with ThreadPoolExecutor(max_workers=cls.MAX_WORKERS) as executor:
             futures = {
@@ -150,7 +221,11 @@ class WikidataAPI:
             }
             for future in as_completed(futures):
                 e1, e2 = futures[future]
-                results[(e1, e2)] = future.result()
+                try:
+                    results[(e1, e2)] = future.result()
+                except Exception as e:
+                    logger.error(f"Error processing relation between {e1} and {e2}: {str(e)}")
+                    results[(e1, e2)] = None
         return results
 
 class DistantSupervisionRelationExtractor:
@@ -236,7 +311,7 @@ class DistantSupervisionRelationExtractor:
                     "relation": rel_label,
                     "object": obj_text
                 })
-                print(f"Extracted relation: {subj_text} - {rel_label} - {obj_text}")
+                logger.info(f"Extracted relation: {subj_text} - {rel_label} - {obj_text}")
         
         return relations
 
@@ -248,33 +323,59 @@ def load_entities_from_json(file_path):
 
 def main():
     # 初始化远程监督抽取器
-    print("Initializing extractor...")
+    logger.info("Initializing extractor...")
     ds_extractor = DistantSupervisionRelationExtractor(nlp)
     
-    print("Loading entities from JSON...")
-    entities_data = load_entities_from_json("output/entities.json")[:5]
+    logger.info("Loading entities from JSON...")
+    entities_data = load_entities_from_json("output/entities.json")
     
     results = []
     
-    for entry in tqdm(entities_data, desc="Processing entries"):
-        sentence = entry["sentence"]
-        entities = entry["entities"]
+    # 分块处理防止内存溢出
+    CHUNK_SIZE = 100
+    for i in tqdm(range(0, len(entities_data), CHUNK_SIZE), desc="Processing chunks"):
+        chunk = entities_data[i:i+CHUNK_SIZE]
+        chunk_results = []
         
-        relations = ds_extractor.extract_relations(entities)
+        for entry in chunk:
+            sentence = entry["sentence"]
+            entities = entry["entities"]
+            
+            try:
+                relations = ds_extractor.extract_relations(entities)
+                chunk_results.append({
+                    "sentence": sentence,
+                    "entities": entities,
+                    "relations": relations or []
+                })
+            except Exception as e:
+                logger.error(f"Error processing sentence: {sentence[:50]}... Error: {str(e)}")
+                chunk_results.append({
+                    "sentence": sentence,
+                    "entities": entities,
+                    "relations": [],
+                    "error": str(e)
+                })
         
-        results.append({
-            "sentence": sentence,
-            "entities": entities,
-            "relations": relations or []
-        })
+        # 保存当前块结果
+        output_dir = Path("output")
+        output_dir.mkdir(exist_ok=True)
+        output_file = output_dir / "relations_with_entities.json"
+        
+        # 处理JSON文件写入方式
+        if not output_file.exists():
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(chunk_results, f, indent=2, ensure_ascii=False)
+        else:
+            with open(output_file, 'r+', encoding='utf-8') as f:
+                data = json.load(f)
+                data.extend(chunk_results)
+                f.seek(0)
+                json.dump(data, f, indent=2, ensure_ascii=False)
+        
+        logger.info(f"Processed chunk {i//CHUNK_SIZE + 1}/{(len(entities_data)-1)//CHUNK_SIZE + 1}")
     
-    # 保存结果
-    output_dir = Path("output")
-    output_dir.mkdir(exist_ok=True)
-    with open(output_dir / "relations_with_entities.json", 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-    
-    print(f"Processing completed. Results saved to {output_dir / 'relations_with_entities.json'}")
+    logger.info(f"Processing completed. Results saved to output/relations_with_entities.json")
 
 if __name__ == "__main__":
     main()
