@@ -15,7 +15,7 @@ def load_and_prepare_data(file_path):
     triples_array = np.array(triples)
     return TriplesFactory.from_labeled_triples(
         triples=triples_array,
-        create_inverse_triples=False  # 根据需求决定是否创建逆向关系
+        create_inverse_triples= True  # 根据需求决定是否创建逆向关系
     )
 
 def train_evaluate_model(model_class, training, testing, model_name):

@@ -74,7 +74,7 @@ def save_to_json(output_path, sentences, entity_results):
 # 使用示例
 if __name__ == "__main__":
     #
-    input_file = "../data/raw/train.txt"  
+    input_file = "../data/raw/valid.txt"  
     sentences = process_conll_file(input_file)
     entity_results = extract_entities(sentences)
     
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     output_dir.mkdir(exist_ok=True)
     
     # 保存为JSON格式
-    json_path = output_dir / "entities.json"
+    json_path = output_dir / "entities_valid.json"
     save_to_json(json_path, sentences, entity_results)
 
     print("Sample Results:")

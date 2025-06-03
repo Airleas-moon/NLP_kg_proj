@@ -1,0 +1,813 @@
+2025-06-03 20:51:18,249 - INFO - Running on CPU
+2025-06-03 20:51:23,536 - INFO - NumExpr defaulting to 16 threads.
+2025-06-03 20:51:24,665 - INFO - Initializing extractor...
+2025-06-03 20:51:24,665 - INFO - Loading entities from JSON...
+2025-06-03 20:51:58,441 - INFO - Extracted relation: Essex - shares border with - Kent
+2025-06-03 20:51:58,442 - INFO - Extracted relation: Derbyshire - shares border with - Nottinghamshire
+2025-06-03 20:51:58,442 - INFO - Extracted relation: Surrey - shares border with - Kent
+2025-06-03 20:52:10,162 - INFO - Extracted relation: Somerset - part of - England
+2025-06-03 20:52:10,164 - INFO - Extracted relation: Grace Road - historic county - Leicestershire
+2025-06-03 20:52:10,174 - INFO - Extracted relation: Leicestershire - part of - England
+2025-06-03 20:52:44,829 - INFO - Extracted relation: Surrey - part of - England
+2025-06-03 20:53:34,892 - INFO - Extracted relation: Tunbridge Wells - historic county - Kent
+2025-06-03 20:53:51,049 - INFO - Extracted relation: London - historic county - Surrey
+2025-06-03 20:54:01,143 - INFO - Extracted relation: Hove - historic county - Sussex
+2025-06-03 20:54:49,996 - INFO - Extracted relation: Sussex - shares border with - Surrey
+2025-06-03 20:54:53,679 - INFO - Extracted relation: Edgbaston - location - Birmingham
+2025-06-03 20:55:00,740 - INFO - Extracted relation: Old Trafford - located in the administrative territorial entity - Manchester
+2025-06-03 20:55:08,799 - INFO - Extracted relation: Alan Shearer - country for sport - England
+2025-06-03 20:56:04,316 - INFO - Extracted relation: Romania - diplomatic relation - Lithuania
+2025-06-03 20:56:07,340 - INFO - Processed chunk 1/33
+2025-06-03 20:56:31,531 - INFO - Extracted relation: Dynamo Moscow - headquarters location - Moscow
+2025-06-03 20:57:13,137 - INFO - Extracted relation: Jansher Khan - country of citizenship - Pakistan
+2025-06-03 20:57:21,927 - INFO - Extracted relation: Australia - country - Australia
+2025-06-03 20:57:21,927 - INFO - Extracted relation: Dan Jenson - country of citizenship - Australia
+2025-06-03 20:57:29,891 - INFO - Extracted relation: Scotland - shares border with - England
+2025-06-03 20:57:39,372 - INFO - Extracted relation: Rodney Eyles - country of citizenship - Australia
+2025-06-03 20:57:39,372 - INFO - Extracted relation: Australia - diplomatic relation - Ireland
+2025-06-03 20:58:19,308 - INFO - Extracted relation: Sandrine Testud - country of citizenship - France
+2025-06-03 20:58:19,308 - INFO - Extracted relation: France - diplomatic relation - Argentina
+2025-06-03 20:58:19,308 - INFO - Extracted relation: Ines Gorrochategui - country of citizenship - Argentina
+2025-06-03 20:58:28,760 - INFO - Extracted relation: Goran Ivanisevic - country of citizenship - Croatia
+2025-06-03 20:58:28,760 - INFO - Extracted relation: Croatia - diplomatic relation - Australia
+2025-06-03 20:58:28,760 - INFO - Extracted relation: Scott Draper - country of citizenship - Australia
+2025-06-03 20:58:37,849 - INFO - Extracted relation: Tim Henman - country of citizenship - Britain
+2025-06-03 20:58:37,849 - INFO - Extracted relation: Britain - diplomatic relation - U.S.
+2025-06-03 20:58:37,849 - INFO - Extracted relation: Doug Flach - country of citizenship - U.S.
+2025-06-03 20:58:45,907 - INFO - Extracted relation: Mark Philippoussis - country of citizenship - Australia
+2025-06-03 20:58:45,907 - INFO - Extracted relation: Australia - diplomatic relation - Russia
+2025-06-03 20:58:45,908 - INFO - Extracted relation: Andrei Olhovskiy - country of citizenship - Russia
+2025-06-03 20:58:55,975 - INFO - Extracted relation: David Rikl - country of citizenship - Czech Republic
+2025-06-03 20:59:04,639 - INFO - Extracted relation: Guy Forget - country of citizenship - France
+2025-06-03 20:59:04,639 - INFO - Extracted relation: France - shares border with - Spain
+2025-06-03 20:59:04,639 - INFO - Extracted relation: Felix Mantilla - country of citizenship - Spain
+2025-06-03 20:59:14,122 - INFO - Extracted relation: Russia - shares border with - Sweden
+2025-06-03 20:59:14,122 - INFO - Extracted relation: Mikael Tillstrom - country of citizenship - Sweden
+2025-06-03 20:59:22,790 - INFO - Extracted relation: Jonas Bjorkman - country of citizenship - Sweden
+2025-06-03 20:59:22,791 - INFO - Extracted relation: David Nainkin - country of citizenship - South Africa
+2025-06-03 20:59:31,263 - INFO - Extracted relation: Lindsay Davenport - country of citizenship - U.S.
+2025-06-03 20:59:31,263 - INFO - Extracted relation: U.S. - diplomatic relation - France
+2025-06-03 20:59:31,264 - INFO - Extracted relation: Anne-Gaelle Sidot - country of citizenship - France
+2025-06-03 20:59:39,339 - INFO - Extracted relation: Conchita Martinez - country of citizenship - Spain
+2025-06-03 20:59:39,341 - INFO - Extracted relation: Helena Sukova - country of citizenship - Czech Republic
+2025-06-03 20:59:47,411 - INFO - Extracted relation: Amanda Coetzer - country of citizenship - South Africa
+2025-06-03 20:59:47,411 - INFO - Extracted relation: Irina Spirlea - country of citizenship - Romania
+2025-06-03 21:00:16,677 - INFO - Extracted relation: Cedric Pioline - country of citizenship - France
+2025-06-03 21:00:16,677 - INFO - Extracted relation: France - shares border with - Spain
+2025-06-03 21:00:16,677 - INFO - Extracted relation: France - shares border with - Switzerland
+2025-06-03 21:00:16,678 - INFO - Extracted relation: Roberto Carretero - country of citizenship - Spain
+2025-06-03 21:00:16,678 - INFO - Extracted relation: Spain - country - Spain
+2025-06-03 21:00:16,678 - INFO - Extracted relation: Alex Corretja - country of citizenship - Spain
+2025-06-03 21:00:16,678 - INFO - Extracted relation: Filippo Veglio - country of citizenship - Switzerland
+2025-06-03 21:00:49,997 - INFO - Extracted relation: Linda Wild - country of citizenship - U.S.
+2025-06-03 21:00:49,997 - INFO - Extracted relation: U.S. - diplomatic relation - Germany
+2025-06-03 21:00:49,997 - INFO - Extracted relation: U.S. - diplomatic relation - Sweden
+2025-06-03 21:00:49,997 - INFO - Extracted relation: U.S. - diplomatic relation - Argentina
+2025-06-03 21:00:49,998 - INFO - Extracted relation: Barbara Rittner - country of citizenship - Germany
+2025-06-03 21:00:49,998 - INFO - Extracted relation: Germany - diplomatic relation - Sweden
+2025-06-03 21:00:49,998 - INFO - Extracted relation: Germany - diplomatic relation - Argentina
+2025-06-03 21:00:49,998 - INFO - Extracted relation: Asa Carlsson - country of citizenship - Sweden
+2025-06-03 21:00:49,998 - INFO - Extracted relation: Sweden - diplomatic relation - Argentina
+2025-06-03 21:00:49,999 - INFO - Extracted relation: Gabriela Sabatini - country of citizenship - Argentina
+2025-06-03 21:01:21,912 - INFO - Extracted relation: Pete Sampras - country of citizenship - U.S.
+2025-06-03 21:01:21,912 - INFO - Extracted relation: U.S. - diplomatic relation - Czech Republic
+2025-06-03 21:01:21,913 - INFO - Extracted relation: U.S. - diplomatic relation - Netherlands
+2025-06-03 21:01:21,913 - INFO - Extracted relation: U.S. - diplomatic relation - Australia
+2025-06-03 21:01:21,913 - INFO - Extracted relation: Jiri Novak - country of citizenship - Czech Republic
+2025-06-03 21:01:21,913 - INFO - Extracted relation: Czech Republic - diplomatic relation - Australia
+2025-06-03 21:01:21,913 - INFO - Extracted relation: Netherlands - diplomatic relation - Australia
+2025-06-03 21:01:21,915 - INFO - Extracted relation: Michael Tebbutt - country of citizenship - Australia
+2025-06-03 21:01:31,820 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 21:01:31,821 - INFO - Extracted relation: Kimberly Po - country of citizenship - U.S.
+2025-06-03 21:01:38,207 - INFO - Extracted relation: Hendrik Dreekmann - country of citizenship - Germany
+2025-06-03 21:01:38,207 - INFO - Extracted relation: Germany - diplomatic relation - Sweden
+2025-06-03 21:01:48,692 - INFO - Extracted relation: Ukraine - shares border with - Slovakia
+2025-06-03 21:01:48,693 - INFO - Extracted relation: Jan Kroslak - country of citizenship - Slovakia
+2025-06-03 21:02:00,495 - INFO - Extracted relation: Petr Korda - country of citizenship - Czech Republic
+2025-06-03 21:02:00,496 - INFO - Extracted relation: Petr Korda - languages spoken, written or signed - Czech
+2025-06-03 21:02:00,496 - INFO - Extracted relation: Czech Republic - official language - Czech
+2025-06-03 21:02:00,496 - INFO - Extracted relation: Bohdan Ulihrach - languages spoken, written or signed - Czech
+2025-06-03 21:02:09,875 - INFO - Extracted relation: Monica Seles - country of citizenship - U.S.
+2025-06-03 21:02:09,875 - INFO - Extracted relation: U.S. - diplomatic relation - Madagascar
+2025-06-03 21:02:09,876 - INFO - Extracted relation: Dally Randriantefy - country of citizenship - Madagascar
+2025-06-03 21:02:09,895 - INFO - Processed chunk 2/33
+2025-06-03 21:02:40,774 - INFO - Extracted relation: Todd Martin - country of citizenship - U.S.
+2025-06-03 21:02:40,774 - INFO - Extracted relation: U.S. - diplomatic relation - Italy
+2025-06-03 21:02:40,774 - INFO - Extracted relation: U.S. - diplomatic relation - Sweden
+2025-06-03 21:02:40,775 - INFO - Extracted relation: U.S. - diplomatic relation - Germany
+2025-06-03 21:02:40,775 - INFO - Extracted relation: Andrea Gaudenzi - country of citizenship - Italy
+2025-06-03 21:02:40,776 - INFO - Extracted relation: Italy - diplomatic relation - Sweden
+2025-06-03 21:02:40,776 - INFO - Extracted relation: Italy - diplomatic relation - Germany
+2025-06-03 21:02:40,776 - INFO - Extracted relation: Stefan Edberg - country of citizenship - Sweden
+2025-06-03 21:02:40,776 - INFO - Extracted relation: Sweden - diplomatic relation - Germany
+2025-06-03 21:02:40,777 - INFO - Extracted relation: Bernd Karbacher - country of citizenship - Germany
+2025-06-03 21:04:13,634 - INFO - Extracted relation: U.S. - contains the administrative territorial entity - Washington
+2025-06-03 21:04:23,043 - INFO - Processed chunk 3/33
+2025-06-03 21:05:07,689 - INFO - Extracted relation: Jesper Parnevik - country of citizenship - Sweden
+2025-06-03 21:06:42,254 - INFO - Extracted relation: SOCCER - authority - FIFA
+2025-06-03 21:07:10,806 - INFO - Extracted relation: Brazil - diplomatic relation - Russia
+2025-06-03 21:07:10,806 - INFO - Extracted relation: Russia - diplomatic relation - Netherlands
+2025-06-03 21:07:55,201 - INFO - Extracted relation: Ludmila Engquist - country of citizenship - Sweden
+2025-06-03 21:07:57,848 - INFO - Extracted relation: Aliuska Lopez - country of citizenship - Cuba
+2025-06-03 21:07:59,992 - INFO - Processed chunk 4/33
+2025-06-03 21:08:01,870 - INFO - Extracted relation: Dionne Rose - country of citizenship - Jamaica
+2025-06-03 21:08:04,278 - INFO - Extracted relation: Julie Baumann - country of citizenship - Switzerland
+2025-06-03 21:08:07,913 - INFO - Extracted relation: Svetlana Masterkova - country of citizenship - Russia
+2025-06-03 21:08:10,324 - INFO - Extracted relation: Patricia Djate-Taillard - country of citizenship - France
+2025-06-03 21:08:12,959 - INFO - Extracted relation: Carla Sacramento - country of citizenship - Portugal
+2025-06-03 21:08:15,517 - INFO - Extracted relation: Yekaterina Podkopayeva - country of citizenship - Russia
+2025-06-03 21:08:17,006 - INFO - Extracted relation: Leah Pells - country of citizenship - Canada
+2025-06-03 21:08:22,424 - INFO - Extracted relation: Mark Crear - country of citizenship - U.S.
+2025-06-03 21:08:24,050 - INFO - Extracted relation: Tony Jarrett - country of citizenship - Britain
+2025-06-03 21:08:26,445 - INFO - Extracted relation: Florian Schwarthoff - country of citizenship - Germany
+2025-06-03 21:08:30,477 - INFO - Extracted relation: Falk Balzer - country of citizenship - Germany
+2025-06-03 21:08:34,506 - INFO - Extracted relation: Frank Busemann - country of citizenship - Germany
+2025-06-03 21:08:36,136 - INFO - Extracted relation: Jack Pierce - country of citizenship - U.S.
+2025-06-03 21:08:39,548 - INFO - Extracted relation: Frankie Fredericks - country of citizenship - Namibia
+2025-06-03 21:08:47,233 - INFO - Extracted relation: Geir Moen - country of citizenship - Norway
+2025-06-03 21:08:59,706 - INFO - Extracted relation: Astrid Kumbernuss - country of citizenship - Germany
+2025-06-03 21:09:03,730 - INFO - Extracted relation: Irina Korzhanenko - country of citizenship - Russia
+2025-06-03 21:09:07,567 - INFO - Extracted relation: Stephanie Storp - country of citizenship - Germany
+2025-06-03 21:09:10,792 - INFO - Extracted relation: Noureddine Morceli - country of citizenship - Algeria
+2025-06-03 21:09:13,424 - INFO - Extracted relation: Venuste Niyongabo - country of citizenship - Burundi
+2025-06-03 21:09:17,545 - INFO - Extracted relation: William Tanui - place of birth - Kenya
+2025-06-03 21:09:19,850 - INFO - Extracted relation: Laban Rotich - place of birth - Kenya
+2025-06-03 21:09:23,507 - INFO - Extracted relation: Isaac Viciosa - country of citizenship - Spain
+2025-06-03 21:09:25,519 - INFO - Extracted relation: John Mayock - country of citizenship - Britain
+2025-06-03 21:09:27,534 - INFO - Extracted relation: Marcus O'Sullivan - country of citizenship - Ireland
+2025-06-03 21:09:29,535 - INFO - Extracted relation: Lars Riedel - country of citizenship - Germany
+2025-06-03 21:09:35,972 - INFO - Extracted relation: Vladimir Dubrovshchik - country of citizenship - Belarus
+2025-06-03 21:09:37,996 - INFO - Extracted relation: Virgilijus Alekna - country of citizenship - Lithuania
+2025-06-03 21:09:42,009 - INFO - Extracted relation: Andreas Seelig - country of citizenship - Germany
+2025-06-03 21:09:44,043 - INFO - Extracted relation: Michael Moellenbeck - country of citizenship - Germany
+2025-06-03 21:09:45,054 - INFO - Extracted relation: Gail Devers - country of citizenship - U.S.
+2025-06-03 21:09:46,054 - INFO - Extracted relation: Merlene Ottey - country of citizenship - Jamaica
+2025-06-03 21:09:47,686 - INFO - Extracted relation: Gwen Torrence - country of citizenship - U.S.
+2025-06-03 21:09:51,097 - INFO - Extracted relation: Mary Onyali - country of citizenship - Nigeria
+2025-06-03 21:09:52,719 - INFO - Extracted relation: Chryste Gaines - country of citizenship - U.S.
+2025-06-03 21:09:56,160 - INFO - Extracted relation: Chandra Sturrup - country of citizenship - Bahamas
+2025-06-03 21:09:57,786 - INFO - Extracted relation: Irina Privalova - country of citizenship - Russia
+2025-06-03 21:09:59,808 - INFO - Extracted relation: Inger Miller - country of citizenship - U.S.
+2025-06-03 21:10:02,209 - INFO - Extracted relation: Gabriela Szabo - country of citizenship - Romania
+2025-06-03 21:10:05,236 - INFO - Extracted relation: Gete Wami - country of citizenship - Ethiopia
+2025-06-03 21:10:06,870 - INFO - Extracted relation: Rose Cheruiyot - country of citizenship - Kenya
+2025-06-03 21:10:09,886 - INFO - Extracted relation: Annemari Sandell - country of citizenship - Finland
+2025-06-03 21:10:12,289 - INFO - Extracted relation: Tegla Loroupe - country of citizenship - Kenya
+2025-06-03 21:10:13,918 - INFO - Extracted relation: Gunhild Halle - country of citizenship - Norway
+2025-06-03 21:10:16,058 - INFO - Extracted relation: Pauline Konga - country of citizenship - Kenya
+2025-06-03 21:10:18,333 - INFO - Extracted relation: Sally Barsosio - country of citizenship - Kenya
+2025-06-03 21:10:20,340 - INFO - Extracted relation: Torrance Zellner - country of citizenship - U.S.
+2025-06-03 21:10:23,375 - INFO - Extracted relation: Samuel Matete - country of citizenship - Zambia
+2025-06-03 21:10:25,393 - INFO - Extracted relation: Derrick Adkins - country of citizenship - U.S.
+2025-06-03 21:10:27,014 - INFO - Extracted relation: Fabrizio Mori - country of citizenship - Italy
+2025-06-03 21:10:33,448 - INFO - Extracted relation: Rohan Robinson - country of citizenship - Australia
+2025-06-03 21:10:36,061 - INFO - Extracted relation: Dusan Kovacs - country of citizenship - Hungary
+2025-06-03 21:10:38,085 - INFO - Extracted relation: Falilat Ogunkoya - country of citizenship - Nigeria
+2025-06-03 21:10:40,103 - INFO - Extracted relation: Jearl Miles - country of citizenship - U.S.
+2025-06-03 21:10:42,128 - INFO - Extracted relation: Fatima Yusuf - country of citizenship - Nigeria
+2025-06-03 21:10:45,130 - INFO - Extracted relation: Olabisi Afolabi - country of citizenship - Nigeria
+2025-06-03 21:10:47,539 - INFO - Extracted relation: Phylis Smith - country of citizenship - Britain
+2025-06-03 21:10:49,560 - INFO - Extracted relation: Linda Kisabaka - country of citizenship - Germany
+2025-06-03 21:10:51,569 - INFO - Extracted relation: Karin Janke - country of citizenship - Germany
+2025-06-03 21:10:52,577 - INFO - Extracted relation: Dennis Mitchell - country of citizenship - U.S.
+2025-06-03 21:10:54,215 - INFO - Extracted relation: Donovan Bailey - country of citizenship - Canada
+2025-06-03 21:10:56,234 - INFO - Extracted relation: Davidson Ezinwa - country of citizenship - Nigeria
+2025-06-03 21:10:56,234 - INFO - Extracted relation: Geir Moen - country of citizenship - Norway
+2025-06-03 21:10:58,634 - INFO - Extracted relation: Marc Blume - country of citizenship - Germany
+2025-06-03 21:11:00,638 - INFO - Extracted relation: Wilson Kipketer - country for sport - Denmark
+2025-06-03 21:11:00,657 - INFO - Processed chunk 5/33
+2025-06-03 21:11:02,664 - INFO - Extracted relation: Norberto Tellez - country of citizenship - Cuba
+2025-06-03 21:11:04,282 - INFO - Extracted relation: Sammy Langat - country of citizenship - Kenya
+2025-06-03 21:11:06,290 - INFO - Extracted relation: Nico Motchebon - country of citizenship - Germany
+2025-06-03 21:11:08,309 - INFO - Extracted relation: David Kiptoo - country of citizenship - Kenya
+2025-06-03 21:11:12,354 - INFO - Extracted relation: Craig Winrow - country of citizenship - Britain
+2025-06-03 21:11:14,350 - INFO - Extracted relation: Igor Trandenkov - country of citizenship - Russia
+2025-06-03 21:11:18,797 - INFO - Extracted relation: Tim Lobinger - country of citizenship - Germany
+2025-06-03 21:11:21,428 - INFO - Extracted relation: Igor Potapovich - country of citizenship - Kazakstan
+2025-06-03 21:11:23,835 - INFO - Extracted relation: Jean Galfione - country of citizenship - France
+2025-06-03 21:11:25,844 - INFO - Extracted relation: Pyotr Bochkary - country of citizenship - Russia
+2025-06-03 21:11:27,854 - INFO - Extracted relation: Dmitri Markov - country for sport - Belarus
+2025-06-03 21:11:30,495 - INFO - Extracted relation: Stefka Kostadinova - country of citizenship - Bulgaria
+2025-06-03 21:11:32,905 - INFO - Extracted relation: Inga Babakova - country of citizenship - Ukraine
+2025-06-03 21:11:34,919 - INFO - Extracted relation: Alina Astafei - country of citizenship - Germany
+2025-06-03 21:11:36,539 - INFO - Extracted relation: Tatyana Motkova - country of citizenship - Russia
+2025-06-03 21:11:38,942 - INFO - Extracted relation: Hanne Haugland - country of citizenship - Norway
+2025-06-03 21:11:40,568 - INFO - Extracted relation: Nele Zilinskiene - country of citizenship - Lithuania
+2025-06-03 21:11:42,966 - INFO - Extracted relation: Yelena Gulyayeva - country of citizenship - Russia
+2025-06-03 21:11:44,598 - INFO - Extracted relation: Natalya Golodnova - country of citizenship - Russia
+2025-06-03 21:11:46,609 - INFO - Extracted relation: Daniel Komen - place of birth - Kenya
+2025-06-03 21:11:48,616 - INFO - Extracted relation: Bob Kennedy - country of citizenship - U.S.
+2025-06-03 21:11:50,637 - INFO - Extracted relation: Paul Koech - country of citizenship - Kenya
+2025-06-03 21:11:54,675 - INFO - Extracted relation: Shem Kororia - country of citizenship - Kenya
+2025-06-03 21:11:57,106 - INFO - Extracted relation: Brahim Lahlafi - country of citizenship - Morocco
+2025-06-03 21:11:59,110 - INFO - Extracted relation: Tom Nyariki - country of citizenship - Kenya
+2025-06-03 21:12:01,125 - INFO - Extracted relation: Fita Bayissa - country of citizenship - Ethiopia
+2025-06-03 21:12:04,800 - INFO - Extracted relation: Yoelvis Quesada - country of citizenship - Cuba
+2025-06-03 21:12:06,788 - INFO - Extracted relation: Kenny Harrison - country of citizenship - U.S.
+2025-06-03 21:12:08,836 - INFO - Extracted relation: Mike Conley - country of citizenship - U.S.
+2025-06-03 21:12:12,234 - INFO - Extracted relation: Armen Martirosyan - country of citizenship - Armenia
+2025-06-03 21:12:14,258 - INFO - Extracted relation: Sigurd Njerve - country of citizenship - Norway
+2025-06-03 21:12:15,881 - INFO - Extracted relation: Carlos Calado - country of citizenship - Portugal
+2025-06-03 21:12:18,281 - INFO - Extracted relation: Charles-Michael Friedek - country of citizenship - Germany
+2025-06-03 21:12:19,908 - INFO - Extracted relation: Tanja Damaske - country of citizenship - Germany
+2025-06-03 21:12:22,316 - INFO - Extracted relation: Trine Hattesta - country of citizenship - Norway
+2025-06-03 21:12:24,335 - INFO - Extracted relation: Isel Lopez - country of citizenship - Cuba
+2025-06-03 21:12:26,454 - INFO - Extracted relation: Heli Rantanen - country of citizenship - Finland
+2025-06-03 21:12:28,365 - INFO - Extracted relation: Louise McPaul - country of citizenship - Australia
+2025-06-03 21:12:29,998 - INFO - Extracted relation: Xiomara Rivero - country of citizenship - Cuba
+2025-06-03 21:12:32,386 - INFO - Extracted relation: Natalya Shikolen - country of citizenship - Belarus
+2025-06-03 21:12:43,108 - INFO - Extracted relation: Donovan Bailey - country of citizenship - Canada
+2025-06-03 21:12:43,108 - INFO - Extracted relation: Canada - shares border with - U.S.
+2025-06-03 21:12:51,561 - INFO - Extracted relation: Namibia - diplomatic relation - Britain
+2025-06-03 21:12:51,562 - INFO - Extracted relation: Linford Christie - country of citizenship - Britain
+2025-06-03 21:12:58,242 - INFO - Extracted relation: Osmond Ezinwa - country of citizenship - Nigeria
+2025-06-03 21:13:00,647 - INFO - Extracted relation: Nigeria - country - Nigeria
+2025-06-03 21:13:00,648 - INFO - Extracted relation: Davidson Ezinwa - country of citizenship - Nigeria
+2025-06-03 21:13:10,347 - INFO - Extracted relation: Peter Karlsson - country of citizenship - Sweden
+2025-06-03 21:13:10,347 - INFO - Extracted relation: Sweden - diplomatic relation - Germany
+2025-06-03 21:13:10,348 - INFO - Extracted relation: Falk Balzer - country of citizenship - Germany
+2025-06-03 21:13:17,799 - INFO - Extracted relation: Greece - diplomatic relation - Germany
+2025-06-03 21:13:17,799 - INFO - Extracted relation: Florian Schwarthoff - country of citizenship - Germany
+2025-06-03 21:13:38,603 - INFO - Extracted relation: Karlsruhe - country - Germany
+2025-06-03 21:13:50,793 - INFO - Extracted relation: Roberto Bisconti - family name - Bisconti
+2025-06-03 21:14:05,838 - INFO - Extracted relation: Sarajevo - country - Bosnia
+2025-06-03 21:14:08,844 - INFO - Extracted relation: NICE - country - France
+2025-06-03 21:14:15,983 - INFO - Extracted relation: Dominique Baratelli - native language - French
+2025-06-03 21:14:15,983 - INFO - Extracted relation: Dominique Baratelli - place of birth - Nice
+2025-06-03 21:15:19,532 - INFO - Extracted relation: Fabio Capello - work location - Torino
+2025-06-03 21:15:24,882 - INFO - Extracted relation: Sri Lanka - diplomatic relation - Australia
+2025-06-03 21:15:25,884 - INFO - Extracted relation: Australia - diplomatic relation - Sri Lanka
+2025-06-03 21:15:25,885 - INFO - Extracted relation: Australia - diplomatic relation - Sri Lanka
+2025-06-03 21:15:37,741 - INFO - Processed chunk 6/33
+2025-06-03 21:16:29,066 - INFO - Extracted relation: Australia - diplomatic relation - Sri Lanka
+2025-06-03 21:18:01,745 - INFO - Processed chunk 7/33
+2025-06-03 21:18:25,876 - INFO - Extracted relation: Federal Reserve - country - U.S.
+2025-06-03 21:18:25,877 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 21:18:25,877 - INFO - Extracted relation: CNBC - country - U.S.
+2025-06-03 21:18:36,369 - INFO - Extracted relation: FOMC - country - U.S.
+2025-06-03 21:19:06,239 - INFO - Extracted relation: Markham - continent - North American
+2025-06-03 21:19:06,240 - INFO - Extracted relation: Ontario - continent - North American
+2025-06-03 21:19:30,829 - INFO - Extracted relation: London - country - Britain
+2025-06-03 21:19:42,564 - INFO - Extracted relation: Amman - twinned administrative body - Khartoum
+2025-06-03 21:19:46,957 - INFO - Extracted relation: GERMANY - diplomatic relation - U.S.
+2025-06-03 21:19:52,017 - INFO - Extracted relation: FRANCE - diplomatic relation - U.S.
+2025-06-03 21:20:16,867 - INFO - Extracted relation: Frank Bruno - country of citizenship - Britain
+2025-06-03 21:21:07,696 - INFO - Processed chunk 8/33
+2025-06-03 21:21:14,362 - INFO - Extracted relation: Keith O'Neill - member of sports team - Norwich City
+2025-06-03 21:22:54,730 - INFO - Extracted relation: Boris Yeltsin - place of death - Moscow
+2025-06-03 21:23:12,488 - INFO - Extracted relation: Yeltsin - country of citizenship - Russia
+2025-06-03 21:23:24,622 - INFO - Extracted relation: KHASAVYURT - country - Russia
+2025-06-03 21:23:35,724 - INFO - Extracted relation: Russia - contains the administrative territorial entity - Chechnya
+2025-06-03 21:23:43,464 - INFO - Extracted relation: Bosnia - diplomatic relation - U.S.
+2025-06-03 21:24:25,253 - INFO - Extracted relation: Belgrade - capital of - Yugoslav
+2025-06-03 21:24:30,285 - INFO - Extracted relation: Tanjug - headquarters location - Belgrade
+2025-06-03 21:24:47,464 - INFO - Extracted relation: Belarus - head of state - Alexander Lukashenko
+2025-06-03 21:24:47,465 - INFO - Extracted relation: Belarus - separated from - Soviet
+2025-06-03 21:25:03,603 - INFO - Extracted relation: Russia - separated from - the Soviet Union
+2025-06-03 21:25:11,842 - INFO - Extracted relation: Moscow - country - Russia
+2025-06-03 21:25:19,634 - INFO - Extracted relation: TAVILDARA - country - Tajikistan
+2025-06-03 21:25:30,409 - INFO - Processed chunk 9/33
+2025-06-03 21:25:43,497 - INFO - Extracted relation: Tajikistan - shares border with - Afghanistan
+2025-06-03 21:25:43,498 - INFO - Extracted relation: Tajikistan - shares border with - China
+2025-06-03 21:25:43,498 - INFO - Extracted relation: Tajikistan - diplomatic relation - Islamic
+2025-06-03 21:25:43,498 - INFO - Extracted relation: Afghanistan - shares border with - China
+2025-06-03 21:25:43,499 - INFO - Extracted relation: Afghanistan - shares border with - Islamic
+2025-06-03 21:25:43,499 - INFO - Extracted relation: China - diplomatic relation - Islamic
+2025-06-03 21:26:23,969 - INFO - Extracted relation: Serbian - country - Montenegro
+2025-06-03 21:26:23,970 - INFO - Extracted relation: Yugoslav - capital - Belgrade
+2025-06-03 21:26:36,404 - INFO - Extracted relation: Poland - member of - U.N.
+2025-06-03 21:26:36,404 - INFO - Extracted relation: Yugoslavia - capital - Belgrade
+2025-06-03 21:26:45,083 - INFO - Extracted relation: Yeltsin - native language - Russian
+2025-06-03 21:26:45,083 - INFO - Extracted relation: Yeltsin - place of death - Moscow
+2025-06-03 21:26:50,211 - INFO - Extracted relation: Naina Yeltsin - spouse - Yeltsin
+2025-06-03 21:26:59,213 - INFO - Extracted relation: Yeltsin - place of death - Moscow
+2025-06-03 21:27:00,323 - INFO - Extracted relation: KHASAVYURT - country - Russia
+2025-06-03 21:27:09,684 - INFO - Extracted relation: Interfax - headquarters location - Moscow
+2025-06-03 21:27:26,846 - INFO - Extracted relation: Hungary - diplomatic relation - Poland
+2025-06-03 21:27:45,607 - INFO - Extracted relation: BOGOTA - country - Colombia
+2025-06-03 21:27:53,676 - INFO - Extracted relation: Casa de Narino - located in the administrative territorial entity - Bogota
+2025-06-03 21:27:58,090 - INFO - Extracted relation: PARAMARIBO - country - Surinam
+2025-06-03 21:28:45,289 - INFO - Processed chunk 10/33
+2025-06-03 21:31:00,904 - INFO - Extracted relation: Mexican - shares border with - U.S
+2025-06-03 21:31:03,686 - INFO - Extracted relation: Mexican - shares border with - United States
+2025-06-03 21:31:03,687 - INFO - Extracted relation: United States - country - United States
+2025-06-03 21:31:10,056 - INFO - Processed chunk 11/33
+2025-06-03 21:31:14,022 - INFO - Extracted relation: U.S. - contains the administrative territorial entity - California
+2025-06-03 21:31:17,047 - INFO - Extracted relation: California - country - U.S.
+2025-06-03 21:31:17,048 - INFO - Extracted relation: U.S. - shares border with - Mexican
+2025-06-03 21:31:21,703 - INFO - Extracted relation: Mexican - country - Mexican
+2025-06-03 21:31:21,703 - INFO - Extracted relation: Mexican - shares border with - U.S.
+2025-06-03 21:31:37,958 - INFO - Extracted relation: Chicago - country - U.S.
+2025-06-03 21:31:37,958 - INFO - Extracted relation: Joseph Bernardin - country of citizenship - U.S.
+2025-06-03 21:31:37,958 - INFO - Extracted relation: Joseph Bernardin - religion or worldview - Roman Catholic
+2025-06-03 21:31:45,313 - INFO - Extracted relation: Cincinnati - country - U.S.
+2025-06-03 21:32:02,493 - INFO - Extracted relation: St. Louis - located in the administrative territorial entity - Missouri
+2025-06-03 21:32:30,750 - INFO - Extracted relation: Missouri - shares border with - Illinois
+2025-06-03 21:32:52,985 - INFO - Extracted relation: U.S. - diplomatic relation - Libya
+2025-06-03 21:33:00,051 - INFO - Extracted relation: Louis Farrakhan - country of citizenship - U.S.
+2025-06-03 21:33:00,052 - INFO - Extracted relation: U.S. - diplomatic relation - Libya
+2025-06-03 21:33:04,177 - INFO - Extracted relation: U.S. - diplomatic relation - Libya
+2025-06-03 21:33:43,046 - INFO - Extracted relation: Libya - diplomatic relation - U.S.
+2025-06-03 21:33:43,046 - INFO - Extracted relation: Libya - capital - Tripoli
+2025-06-03 21:33:43,047 - INFO - Extracted relation: Libya - language used - Libyan
+2025-06-03 21:34:20,452 - INFO - Extracted relation: Ross Perot - member of political party - Reform Party
+2025-06-03 21:34:27,572 - INFO - Processed chunk 12/33
+2025-06-03 21:34:46,981 - INFO - Extracted relation: Israel - capital - Jerusalem
+2025-06-03 21:34:46,981 - INFO - Extracted relation: Jerusalem - language used - Arab
+2025-06-03 21:35:21,919 - INFO - Extracted relation: European Union - diplomatic relation - Israel
+2025-06-03 21:36:11,737 - INFO - Extracted relation: France - capital - Paris
+2025-06-03 21:36:47,807 - INFO - Extracted relation: CFDT - headquarters location - Paris
+2025-06-03 21:36:47,807 - INFO - Extracted relation: CGT - headquarters location - Paris
+2025-06-03 21:36:47,808 - INFO - Extracted relation: Air France - airline hub - Charles de Gaulle airport
+2025-06-03 21:36:47,809 - INFO - Extracted relation: Air France - location of formation - Paris
+2025-06-03 21:36:47,809 - INFO - Extracted relation: Charles de Gaulle airport - named after - Paris
+2025-06-03 21:37:01,252 - INFO - Extracted relation: GRONINGEN - country - Netherlands
+2025-06-03 21:37:11,023 - INFO - Extracted relation: Nicole - language of work or name - Dutch
+2025-06-03 21:37:11,023 - INFO - Extracted relation: Groningen - official language - Dutch
+2025-06-03 21:37:20,429 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 21:37:25,459 - INFO - Extracted relation: Statistics Canada - country - Canada
+2025-06-03 21:37:25,460 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 21:37:29,290 - INFO - Processed chunk 13/33
+2025-06-03 21:37:36,560 - INFO - Extracted relation: Syria - shares border with - Israel
+2025-06-03 21:37:43,341 - INFO - Extracted relation: Syria - shares border with - Israel
+2025-06-03 21:37:43,342 - INFO - Extracted relation: Israel - head of government - Benjamin Netanyahu
+2025-06-03 21:38:14,580 - INFO - Extracted relation: Syria - official language - Arab
+2025-06-03 21:38:14,581 - INFO - Extracted relation: Syria - shares border with - Israel
+2025-06-03 21:38:14,581 - INFO - Extracted relation: Arabs - native language - Arab
+2025-06-03 21:38:14,582 - INFO - Extracted relation: Netanyahu - residence - Jerusalem
+2025-06-03 21:38:14,582 - INFO - Extracted relation: Netanyahu - country of citizenship - Israel
+2025-06-03 21:38:14,583 - INFO - Extracted relation: Jerusalem - country - Israel
+2025-06-03 21:38:14,583 - INFO - Extracted relation: Syria - shares border with - Israel
+2025-06-03 21:39:10,547 - INFO - Extracted relation: Israel - capital - Jerusalem
+2025-06-03 21:39:21,285 - INFO - Extracted relation: Israel - capital - Jerusalem
+2025-06-03 21:39:22,292 - INFO - Extracted relation: Jerusalem - country - Israel
+2025-06-03 21:39:37,437 - INFO - Extracted relation: al-Ram - shares border with - Jerusalem
+2025-06-03 21:39:58,863 - INFO - Processed chunk 14/33
+2025-06-03 21:40:25,303 - INFO - Extracted relation: China - language used - Chinese
+2025-06-03 21:40:47,543 - INFO - Extracted relation: Indonesia - shares border with - India
+2025-06-03 21:40:47,544 - INFO - Extracted relation: Indonesia - shares border with - Malaysia
+2025-06-03 21:40:47,544 - INFO - Extracted relation: India - diplomatic relation - Malaysia
+2025-06-03 21:41:01,277 - INFO - Extracted relation: CITIC Pacific - country - Hong Kong
+2025-06-03 21:41:28,868 - INFO - Extracted relation: Flavio Cotti - languages spoken, written or signed - German
+2025-06-03 21:41:28,868 - INFO - Extracted relation: OSCE - official language - German
+2025-06-03 21:41:28,869 - INFO - Extracted relation: OSCE - headquarters location - Vienna
+2025-06-03 21:41:28,869 - INFO - Extracted relation: OSCE - official language - Russian
+2025-06-03 21:41:28,869 - INFO - Extracted relation: Chechnya - official language - Russian
+2025-06-03 21:41:54,414 - INFO - Extracted relation: Tim Guldimann - country of citizenship - Swiss
+2025-06-03 21:41:54,415 - INFO - Extracted relation: Swiss - member of - OSCE
+2025-06-03 21:42:00,440 - INFO - Extracted relation: Chechnya - country - Russia
+2025-06-03 21:42:00,440 - INFO - Extracted relation: Russia - country - Russia
+2025-06-03 21:42:05,093 - INFO - Extracted relation: Chechnya - country - Russia
+2025-06-03 21:42:05,094 - INFO - Extracted relation: Russia - country - Russia
+2025-06-03 21:42:05,094 - INFO - Extracted relation: Russia - member of - OSCE
+2025-06-03 21:42:05,212 - INFO - Processed chunk 15/33
+2025-06-03 21:42:07,513 - INFO - Extracted relation: Chechnya - official language - Russian
+2025-06-03 21:42:31,343 - INFO - Extracted relation: Armenia - shares border with - Azerbaijan
+2025-06-03 21:42:31,344 - INFO - Extracted relation: Armenia - diplomatic relation - Germany
+2025-06-03 21:42:31,344 - INFO - Extracted relation: Azerbaijan - diplomatic relation - Germany
+2025-06-03 21:42:55,824 - INFO - Extracted relation: Nagorno - different from - Karabakh
+2025-06-03 21:42:55,825 - INFO - Extracted relation: Karabakh - language used - Azeri
+2025-06-03 21:42:55,825 - INFO - Extracted relation: Nagorno - different from - Karabakh
+2025-06-03 21:43:08,084 - INFO - Extracted relation: Azerbaijan - language used - Armenian
+2025-06-03 21:43:08,085 - INFO - Extracted relation: Azerbaijan - shares border with - Armenia
+2025-06-03 21:43:08,085 - INFO - Extracted relation: Nagorno - different from - Karabakh
+2025-06-03 21:43:08,086 - INFO - Extracted relation: Nagorno - official language - Armenian
+2025-06-03 21:43:08,086 - INFO - Extracted relation: Nagorno - shares border with - Armenia
+2025-06-03 21:43:08,087 - INFO - Extracted relation: Karabakh - language used - Armenian
+2025-06-03 21:43:08,088 - INFO - Extracted relation: Armenian - country - Armenia
+2025-06-03 21:43:11,118 - INFO - Extracted relation: Russia - diplomatic relation - Germany
+2025-06-03 21:43:21,833 - INFO - Extracted relation: Interfax - country - Russia
+2025-06-03 21:43:21,833 - INFO - Extracted relation: OSCE - has part(s) - Minsk Group
+2025-06-03 21:43:21,834 - INFO - Extracted relation: Russia - shares border with - Finland
+2025-06-03 21:43:56,138 - INFO - Extracted relation: Spitzbergen - country - Norway
+2025-06-03 21:44:04,597 - INFO - Extracted relation: Guangdong - country - China
+2025-06-03 21:44:26,427 - INFO - Extracted relation: Auckland - country - New Zealand
+2025-06-03 21:44:29,873 - INFO - Extracted relation: Hong Kong - diplomatic relation - Britain
+2025-06-03 21:44:29,873 - INFO - Extracted relation: Hong Kong - country - China
+2025-06-03 21:44:29,874 - INFO - Extracted relation: Britain - diplomatic relation - China
+2025-06-03 21:44:49,652 - INFO - Extracted relation: Philippines - country - Philippines
+2025-06-03 21:45:03,802 - INFO - Extracted relation: Indonesia - diplomatic relation - South Korea
+2025-06-03 21:45:03,804 - INFO - Extracted relation: Indonesia - capital - Jakarta
+2025-06-03 21:45:18,000 - INFO - Extracted relation: Indonesian Democratic Party - chairperson - Megawati Sukarnoputri
+2025-06-03 21:45:21,111 - INFO - Processed chunk 16/33
+2025-06-03 21:45:54,319 - INFO - Extracted relation: West Bank - capital - Ramallah
+2025-06-03 21:46:20,522 - INFO - Extracted relation: Jerusalem - country - Israel
+2025-06-03 21:46:20,523 - INFO - Extracted relation: Palestinians - part of - Arabs
+2025-06-03 21:46:20,523 - INFO - Extracted relation: Jews - country - Israel
+2025-06-03 21:46:22,938 - INFO - Extracted relation: Palestinians - native language - Arab
+2025-06-03 21:46:23,556 - INFO - Extracted relation: Israel - capital - Jerusalem
+2025-06-03 21:46:51,194 - INFO - Extracted relation: U.N. - child organization/unit - Security Council
+2025-06-03 21:46:51,194 - INFO - Extracted relation: Tono Eitel - country of citizenship - Germany
+2025-06-03 21:46:51,194 - INFO - Extracted relation: Germany - diplomatic relation - Israel
+2025-06-03 21:47:05,327 - INFO - Extracted relation: Jerusalem - country - Israel
+2025-06-03 21:47:05,327 - INFO - Extracted relation: Israel - country - Israel
+2025-06-03 21:47:10,987 - INFO - Extracted relation: LA CORUNA - country - Spain
+2025-06-03 21:47:18,455 - INFO - Extracted relation: Roberto Carlos - languages spoken, written or signed - Spanish
+2025-06-03 21:48:04,898 - INFO - Extracted relation: HERZLIYA - country - Israel
+2025-06-03 21:48:14,991 - INFO - Extracted relation: ESCHEN - country - Liechtenstein
+2025-06-03 21:49:12,160 - INFO - Extracted relation: Robert Allenby - country of citizenship - Australia
+2025-06-03 21:49:12,161 - INFO - Extracted relation: Robert Allenby - family name - Allenby
+2025-06-03 21:49:12,161 - INFO - Extracted relation: Australia - diplomatic relation - Spain
+2025-06-03 21:49:14,551 - INFO - Extracted relation: Miguel Angel Jimenez - country of citizenship - Spain
+2025-06-03 21:49:17,594 - INFO - Extracted relation: Jose Coceres - country of citizenship - Argentina
+2025-06-03 21:49:25,549 - INFO - Extracted relation: Joakim Haeggman - country of citizenship - Sweden
+2025-06-03 21:49:25,549 - INFO - Extracted relation: Sweden - diplomatic relation - France
+2025-06-03 21:50:07,623 - INFO - Extracted relation: Philip Walton - country of citizenship - Ireland
+2025-06-03 21:50:07,623 - INFO - Extracted relation: Klas Eriksson - country of citizenship - Sweden
+2025-06-03 21:50:33,231 - INFO - Extracted relation: Australia - country - Australia
+2025-06-03 21:50:33,231 - INFO - Extracted relation: Mike Clayton - country of citizenship - Australia
+2025-06-03 21:50:47,376 - INFO - Extracted relation: Peter Hedblom - country of citizenship - Sweden
+2025-06-03 21:50:50,403 - INFO - Extracted relation: TOFTIR - country - Faroe Islands
+2025-06-03 21:51:06,243 - INFO - Processed chunk 17/33
+2025-06-03 21:51:16,662 - INFO - Extracted relation: LANDGRAAF - country - Netherlands
+2025-06-03 21:51:24,358 - INFO - Extracted relation: Olaf Ludwig - country of citizenship - Germany
+2025-06-03 21:51:29,401 - INFO - Extracted relation: Giovanni Lombardi - country of citizenship - Italy
+2025-06-03 21:51:29,402 - INFO - Extracted relation: Giovanni Lombardi - member of sports team - Polti
+2025-06-03 21:51:36,867 - INFO - Extracted relation: Erik Breukink - country for sport - Netherlands
+2025-06-03 21:51:38,482 - INFO - Extracted relation: Jesper Skibby - country for sport - Denmark
+2025-06-03 21:51:43,545 - INFO - Extracted relation: Vyacheslav Ekimov - country of citizenship - Russia
+2025-06-03 21:51:48,594 - INFO - Extracted relation: Luca Pavanello - country of citizenship - Italy
+2025-06-03 21:51:50,596 - INFO - Extracted relation: Eleuterio Anguita - country of citizenship - Spain
+2025-06-03 21:51:54,655 - INFO - Extracted relation: Michael Andersson - country of citizenship - Sweden
+2025-06-03 21:51:56,685 - INFO - Extracted relation: Johan Capiot - country of citizenship - Belgium
+2025-06-03 21:52:01,110 - INFO - Extracted relation: Rolf Sorensen - country for sport - Denmark
+2025-06-03 21:52:05,768 - INFO - Extracted relation: Lance Armstrong - country of citizenship - U.S.
+2025-06-03 21:52:08,793 - INFO - Extracted relation: Marco Lietti - country of citizenship - Italy
+2025-06-03 21:52:12,224 - INFO - Extracted relation: Erik Dekker - country for sport - Netherlands
+2025-06-03 21:52:14,868 - INFO - Extracted relation: Maarten den Bakker - country for sport - Netherlands
+2025-06-03 21:53:14,796 - INFO - Extracted relation: Antonella Bellutti - country of citizenship - Italy
+2025-06-03 21:53:16,439 - INFO - Extracted relation: Marion Clignet - country of citizenship - France
+2025-06-03 21:53:18,445 - INFO - Extracted relation: Lucy Tyler-Sharman - country of citizenship - Australia
+2025-06-03 21:53:20,850 - INFO - Extracted relation: Yvonne McGregor - country of citizenship - Britain
+2025-06-03 21:53:25,916 - INFO - Extracted relation: Jane Quigley - country of citizenship - U.S.
+2025-06-03 21:53:27,928 - INFO - Extracted relation: Rasa Mazeikyte - country of citizenship - Lithuania
+2025-06-03 21:53:57,194 - INFO - Extracted relation: Italy - diplomatic relation - Russia
+2025-06-03 21:54:50,757 - INFO - Extracted relation: France - shares border with - Germany
+2025-06-03 21:54:52,766 - INFO - Extracted relation: Felicia Ballanger - country of citizenship - France
+2025-06-03 21:54:54,399 - INFO - Extracted relation: Annett Neumann - country of citizenship - Germany
+2025-06-03 21:54:58,455 - INFO - Extracted relation: Magali Faure - country of citizenship - France
+2025-06-03 21:55:00,840 - INFO - Extracted relation: Olga Slioussareva - country of citizenship - Russia
+2025-06-03 21:55:02,476 - INFO - Extracted relation: Oksana Grichina - country of citizenship - Russia
+2025-06-03 21:55:04,868 - INFO - Extracted relation: Tanya Dubnicoff - country of citizenship - Canada
+2025-06-03 21:55:06,499 - INFO - Extracted relation: Kathrin Freitag - country of citizenship - Germany
+2025-06-03 21:55:08,904 - INFO - Extracted relation: Donna Wynd - country of citizenship - New Zealand
+2025-06-03 21:55:10,533 - INFO - Extracted relation: Mira Kasslin - country of citizenship - Finland
+2025-06-03 21:55:12,544 - INFO - Extracted relation: Wendy Everson - country of citizenship - Britain
+2025-06-03 21:55:14,557 - INFO - Extracted relation: Giovanna Troldi - country of citizenship - Italy
+2025-06-03 21:55:16,577 - INFO - Extracted relation: Rita Razmaite - country of citizenship - Lithuania
+2025-06-03 21:55:16,637 - INFO - Processed chunk 18/33
+2025-06-03 21:55:36,769 - INFO - Extracted relation: Italy - shares border with - France
+2025-06-03 21:55:46,532 - INFO - Extracted relation: Florian Rousseau - country of citizenship - France
+2025-06-03 21:55:46,532 - INFO - Extracted relation: Ainars Kiksis - country of citizenship - Latvia
+2025-06-03 21:55:54,368 - INFO - Extracted relation: Darryn Hill - country of citizenship - Australia
+2025-06-03 21:55:54,368 - INFO - Extracted relation: Australia - diplomatic relation - U.S.
+2025-06-03 21:55:54,369 - INFO - Extracted relation: Christian Arrue - country of citizenship - U.S.
+2025-06-03 21:56:01,418 - INFO - Extracted relation: Roberto Chiappa - country of citizenship - Italy
+2025-06-03 21:56:01,418 - INFO - Extracted relation: Italy - shares border with - France
+2025-06-03 21:56:01,419 - INFO - Extracted relation: Frederic Magne - country of citizenship - France
+2025-06-03 21:56:08,479 - INFO - Extracted relation: Marty Nothstein - country of citizenship - U.S.
+2025-06-03 21:56:08,479 - INFO - Extracted relation: U.S. - diplomatic relation - Czech Republic
+2025-06-03 21:56:08,479 - INFO - Extracted relation: Pavel Buran - country of citizenship - Czech Republic
+2025-06-03 21:56:11,131 - INFO - Extracted relation: Marion Clignet - country of citizenship - France
+2025-06-03 21:56:19,631 - INFO - Extracted relation: Lucy Tyler-Sharman - country of citizenship - Australia
+2025-06-03 21:56:23,259 - INFO - Extracted relation: Antonella Bellutti - country of citizenship - Italy
+2025-06-03 22:00:47,334 - INFO - Extracted relation: Orioles - league or competition - American League
+2025-06-03 22:01:42,803 - INFO - Extracted relation: Todd Van Poppel - member of sports team - Tigers
+2025-06-03 22:02:04,172 - INFO - Extracted relation: Marc Newfield - member of sports team - Brewers
+2025-06-03 22:02:05,896 - INFO - Extracted relation: Bob Wickman - member of sports team - Brewers
+2025-06-03 22:02:15,724 - INFO - Extracted relation: ESSEX - shares border with - KENT
+2025-06-03 22:02:23,065 - INFO - Extracted relation: Essex - shares border with - Kent
+2025-06-03 22:02:23,065 - INFO - Extracted relation: Kent - shares border with - Surrey
+2025-06-03 22:02:41,862 - INFO - Extracted relation: Derbyshire - shares border with - Leicestershire
+2025-06-03 22:02:41,862 - INFO - Extracted relation: Worcestershire - shares border with - Warwickshire
+2025-06-03 22:02:41,862 - INFO - Extracted relation: Warwickshire - shares border with - Leicestershire
+2025-06-03 22:03:12,516 - INFO - Extracted relation: Robert Allenby - country of citizenship - Australia
+2025-06-03 22:03:15,156 - INFO - Extracted relation: Costantino Rocca - country of citizenship - Italy
+2025-06-03 22:03:17,555 - INFO - Extracted relation: Mark McNulty - country of citizenship - Zimbabwe
+2025-06-03 22:03:26,283 - INFO - Extracted relation: Frank Nobilo - country of citizenship - New Zealand
+2025-06-03 22:03:28,654 - INFO - Extracted relation: Paul McGinley - country of citizenship - Ireland
+2025-06-03 22:03:30,689 - INFO - Extracted relation: Padraig Harrington - country of citizenship - Ireland
+2025-06-03 22:03:32,309 - INFO - Extracted relation: Retief Goosen - country of citizenship - South Africa
+2025-06-03 22:03:32,310 - INFO - Extracted relation: Miguel Angel Jimenez - country of citizenship - Spain
+2025-06-03 22:03:32,379 - INFO - Processed chunk 19/33
+2025-06-03 22:05:04,437 - INFO - Extracted relation: Michael Lynagh - languages spoken, written or signed - English
+2025-06-03 22:06:10,764 - INFO - Processed chunk 20/33
+2025-06-03 22:07:28,415 - INFO - Processed chunk 21/33
+2025-06-03 22:08:18,241 - INFO - Extracted relation: The Oval - historic county - Surrey
+2025-06-03 22:08:18,241 - INFO - Extracted relation: London - historic county - Surrey
+2025-06-03 22:08:34,980 - INFO - Extracted relation: Headingley - historic county - Yorkshire
+2025-06-03 22:08:36,112 - INFO - Extracted relation: Hove - historic county - Sussex
+2025-06-03 22:08:43,477 - INFO - Extracted relation: Tunbridge Wells - historic county - Kent
+2025-06-03 22:08:46,102 - INFO - Extracted relation: Bristol - historic county - Gloucestershire
+2025-06-03 22:08:51,422 - INFO - Extracted relation: Alex Zanardi - country of citizenship - Italy
+2025-06-03 22:08:54,529 - INFO - Extracted relation: Michael Andretti - country of citizenship - U.S.
+2025-06-03 22:08:57,249 - INFO - Extracted relation: Bobby Rahal - country of citizenship - U.S.
+2025-06-03 22:08:59,319 - INFO - Extracted relation: Bryan Herta - country of citizenship - U.S.
+2025-06-03 22:09:01,228 - INFO - Extracted relation: Jimmy Vasser - country of citizenship - U.S.
+2025-06-03 22:09:15,390 - INFO - Extracted relation: Paul Tracy - country of citizenship - Canada
+2025-06-03 22:09:22,855 - INFO - Extracted relation: Al Unser Jr - country of citizenship - U.S.
+2025-06-03 22:09:25,488 - INFO - Extracted relation: Andre Ribeiro - country of citizenship - Brazil
+2025-06-03 22:09:28,910 - INFO - Extracted relation: Mauricio Gugelmin - country of citizenship - Brazil
+2025-06-03 22:09:30,537 - INFO - Extracted relation: Gil de Ferran - country of citizenship - Brazil
+2025-06-03 22:09:35,591 - INFO - Extracted relation: Canada - diplomatic relation - Panama
+2025-06-03 22:10:12,825 - INFO - Extracted relation: Henry Honiball - member of sports team - Springboks
+2025-06-03 22:16:46,674 - INFO - Processed chunk 22/33
+2025-06-03 22:17:21,278 - INFO - Extracted relation: CHISINAU - country - Moldova
+2025-06-03 22:17:49,394 - INFO - Extracted relation: Italy - diplomatic relation - Russia
+2025-06-03 22:17:53,140 - INFO - Extracted relation: Italy - diplomatic relation - Russia
+2025-06-03 22:17:53,140 - INFO - Extracted relation: Romania - diplomatic relation - Lithuania
+2025-06-03 22:18:07,273 - INFO - Extracted relation: Armenia - diplomatic relation - Portugal
+2025-06-03 22:18:11,941 - INFO - Extracted relation: Azerbaijan - diplomatic relation - Switzerland
+2025-06-03 22:18:23,249 - INFO - Processed chunk 23/33
+2025-06-03 22:18:41,617 - INFO - Extracted relation: Jansher - country of citizenship - Pakistani
+2025-06-03 22:19:11,909 - INFO - Extracted relation: Jansher Khan - country of citizenship - Pakistan
+2025-06-03 22:19:11,910 - INFO - Extracted relation: Pakistan - diplomatic relation - Australia
+2025-06-03 22:19:11,910 - INFO - Extracted relation: Australia - country - Australia
+2025-06-03 22:19:11,910 - INFO - Extracted relation: Rodney Eyles - country of citizenship - Australia
+2025-06-03 22:19:12,641 - INFO - Extracted relation: Jesper Parnevik - country of citizenship - Sweden
+2025-06-03 22:19:34,111 - INFO - Extracted relation: Belgium - diplomatic relation - U.S.
+2025-06-03 22:19:34,111 - INFO - Extracted relation: Belgium - shares border with - Netherlands
+2025-06-03 22:19:34,112 - INFO - Extracted relation: U.S. - diplomatic relation - Netherlands
+2025-06-03 22:19:41,189 - INFO - Extracted relation: Germany - shares border with - France
+2025-06-03 22:19:41,189 - INFO - Extracted relation: Germany - diplomatic relation - Japan
+2025-06-03 22:19:41,189 - INFO - Extracted relation: France - diplomatic relation - Japan
+2025-06-03 22:20:00,372 - INFO - Extracted relation: The United States - diplomatic relation - Japan
+2025-06-03 22:20:00,372 - INFO - Extracted relation: Austria - diplomatic relation - Japan
+2025-06-03 22:20:01,995 - INFO - Extracted relation: Japan - shares border with - U.S.
+2025-06-03 22:20:01,995 - INFO - Extracted relation: Monica Seles - country of citizenship - U.S.
+2025-06-03 22:21:37,297 - INFO - Extracted relation: Steffi Graf - country of citizenship - Germany
+2025-06-03 22:21:37,297 - INFO - Extracted relation: Germany - shares border with - Switzerland
+2025-06-03 22:21:37,298 - INFO - Extracted relation: Germany - diplomatic relation - Japan
+2025-06-03 22:21:37,298 - INFO - Extracted relation: Germany - shares border with - Austria
+2025-06-03 22:21:37,298 - INFO - Extracted relation: Germany - shares border with - Czech Republic
+2025-06-03 22:21:37,298 - INFO - Extracted relation: Natasha Zvereva - country of citizenship - Belarus
+2025-06-03 22:21:37,299 - INFO - Extracted relation: Belarus - diplomatic relation - Switzerland
+2025-06-03 22:21:37,299 - INFO - Extracted relation: Belarus - diplomatic relation - Czech Republic
+2025-06-03 22:21:37,299 - INFO - Extracted relation: Martina Hingis - country of citizenship - Switzerland
+2025-06-03 22:21:37,300 - INFO - Extracted relation: Switzerland - shares border with - Austria
+2025-06-03 22:21:37,300 - INFO - Extracted relation: Naoko Kijimuta - country of citizenship - Japan
+2025-06-03 22:21:37,300 - INFO - Extracted relation: Japan - diplomatic relation - Austria
+2025-06-03 22:21:37,301 - INFO - Extracted relation: Judith Wiesner - country of citizenship - Austria
+2025-06-03 22:21:37,301 - INFO - Extracted relation: Austria - shares border with - Czech Republic
+2025-06-03 22:21:37,301 - INFO - Extracted relation: Petra Langrova - country of citizenship - Czech Republic
+2025-06-03 22:21:49,790 - INFO - Extracted relation: Thomas Enqvist - country of citizenship - Sweden
+2025-06-03 22:21:49,790 - INFO - Extracted relation: Pablo Campana - country of citizenship - Ecuador
+2025-06-03 22:21:49,790 - INFO - Extracted relation: United States - diplomatic relation - Netherlands
+2025-06-03 22:21:50,400 - INFO - Extracted relation: Czech Republic - shares border with - Germany
+2025-06-03 22:21:50,400 - INFO - Extracted relation: France - diplomatic relation - Japan
+2025-06-03 22:21:51,398 - INFO - Extracted relation: Austria - diplomatic relation - Croatia
+2025-06-03 22:21:54,511 - INFO - Processed chunk 24/33
+2025-06-03 22:21:56,821 - INFO - Extracted relation: The United States - diplomatic relation - El Salvador
+2025-06-03 22:22:33,812 - INFO - Extracted relation: Todd Stottlemyre - member of sports team - Cardinals
+2025-06-03 22:22:46,424 - INFO - Processed chunk 25/33
+2025-06-03 22:23:04,532 - INFO - Extracted relation: Jeff Parrett - member of sports team - Phillies
+2025-06-03 22:23:33,799 - INFO - Extracted relation: Cubs - headquarters location - Chicago
+2025-06-03 22:24:36,017 - INFO - Extracted relation: Tom Pagnozzi - member of sports team - Cardinals
+2025-06-03 22:24:36,017 - INFO - Extracted relation: Alan Benes - member of sports team - Cardinals
+2025-06-03 22:24:41,058 - INFO - Extracted relation: Ray Lankford - member of sports team - Cardinals
+2025-06-03 22:25:34,855 - INFO - Extracted relation: Britain - diplomatic relation - Mexico
+2025-06-03 22:25:49,152 - INFO - Extracted relation: Stephan Marasek - member of sports team - SC Freiburg
+2025-06-03 22:26:04,910 - INFO - Extracted relation: Duncan Ferguson - country for sport - Scotland
+2025-06-03 22:29:27,585 - INFO - Extracted relation: Nicolas Ouedec - country of citizenship - France
+2025-06-03 22:29:27,586 - INFO - Extracted relation: Youri Djorkaeff - country of citizenship - France
+2025-06-03 22:29:27,586 - INFO - Extracted relation: France - diplomatic relation - Mexico
+2025-06-03 22:35:31,171 - INFO - Extracted relation: FRANCE - diplomatic relation - MEXICO
+2025-06-03 22:35:31,172 - INFO - Extracted relation: France - diplomatic relation - Mexico
+2025-06-03 22:35:31,261 - INFO - Processed chunk 26/33
+2025-06-03 22:35:42,500 - INFO - Extracted relation: Belgium - diplomatic relation - Turkey
+2025-06-03 22:35:42,500 - INFO - Extracted relation: Turkey - official language - Turkish
+2025-06-03 22:35:49,984 - INFO - Extracted relation: Sergen Yalcin - native language - Turkish
+2025-06-03 22:36:00,052 - INFO - Extracted relation: Marc Degryse - country of citizenship - Belgium
+2025-06-03 22:36:19,257 - INFO - Extracted relation: Rustu Recber - country of citizenship - Turkey
+2025-06-03 22:36:20,251 - INFO - Extracted relation: France - shares border with - Belgium
+2025-06-03 22:40:31,258 - INFO - Extracted relation: Belgium - diplomatic relation - Russia
+2025-06-03 22:40:31,258 - INFO - Extracted relation: Belgium - diplomatic relation - Italy
+2025-06-03 22:40:31,258 - INFO - Extracted relation: Russia - diplomatic relation - Italy
+2025-06-03 22:40:34,221 - INFO - Extracted relation: Belgium - diplomatic relation - Turkey
+2025-06-03 22:41:16,624 - INFO - Extracted relation: German - country - France
+2025-06-03 22:41:27,351 - INFO - Extracted relation: Germany - shares border with - France
+2025-06-03 22:41:31,778 - INFO - Extracted relation: Berti Vogts - country of citizenship - Germany
+2025-06-03 22:41:31,778 - INFO - Extracted relation: Poland - shares border with - Germany
+2025-06-03 22:41:38,851 - INFO - Extracted relation: Romania - diplomatic relation - Lithuania
+2025-06-03 22:41:44,610 - INFO - Processed chunk 27/33
+2025-06-03 22:42:17,866 - INFO - Extracted relation: Henry VIII - spouse - Anne Boleyn
+2025-06-03 22:42:41,078 - INFO - Extracted relation: French - country - Italy
+2025-06-03 22:42:41,079 - INFO - Extracted relation: Turin - country - Italy
+2025-06-03 22:42:41,079 - INFO - Extracted relation: Eugene - language of work or name - French
+2025-06-03 22:43:12,949 - INFO - Extracted relation: Alsace - country - France
+2025-06-03 22:43:12,949 - INFO - Extracted relation: Strasbourg - country - France
+2025-06-03 22:43:31,435 - INFO - Extracted relation: Brazil - diplomatic relation - Portugal
+2025-06-03 22:43:31,436 - INFO - Extracted relation: Brazil - country - Brazil
+2025-06-03 22:43:31,436 - INFO - Extracted relation: Portugal - diplomatic relation - Brazil
+2025-06-03 22:43:46,981 - INFO - Extracted relation: Giuseppe Garibaldi - native language - Italian
+2025-06-03 22:43:46,981 - INFO - Extracted relation: Naples - official language - Italian
+2025-06-03 22:44:07,917 - INFO - Extracted relation: Desmond Tutu - place of death - Cape Town
+2025-06-03 22:44:07,918 - INFO - Extracted relation: Desmond Tutu - country of citizenship - South Africa
+2025-06-03 22:44:07,918 - INFO - Extracted relation: Cape Town - country - South Africa
+2025-06-03 22:44:15,635 - INFO - Extracted relation: The United States - diplomatic relation - Saudi
+2025-06-03 22:44:15,635 - INFO - Extracted relation: The United States - diplomatic relation - Kuwaiti
+2025-06-03 22:44:15,636 - INFO - Extracted relation: Saudi - shares border with - Kuwaiti
+2025-06-03 22:44:20,652 - INFO - Extracted relation: Alan John Percivale - family name - Taylor
+2025-06-03 22:44:55,669 - INFO - Extracted relation: Soviet - replaced by - Russia
+2025-06-03 22:44:55,669 - INFO - Extracted relation: Soviet - replaced by - Belarus
+2025-06-03 22:44:55,670 - INFO - Extracted relation: Soviet - replaced by - Kazakhstan
+2025-06-03 22:44:55,670 - INFO - Extracted relation: Soviet - replaced by - Uzbekistan
+2025-06-03 22:44:55,670 - INFO - Extracted relation: Soviet - replaced by - Armenia
+2025-06-03 22:44:55,670 - INFO - Extracted relation: Soviet - replaced by - Tajikistan
+2025-06-03 22:44:55,670 - INFO - Extracted relation: Soviet - official language - Russian
+2025-06-03 22:44:55,671 - INFO - Extracted relation: Russia - shares border with - Belarus
+2025-06-03 22:44:55,671 - INFO - Extracted relation: Russia - shares border with - Kazakhstan
+2025-06-03 22:44:55,671 - INFO - Extracted relation: Russia - diplomatic relation - Uzbekistan
+2025-06-03 22:44:55,671 - INFO - Extracted relation: Russia - diplomatic relation - Armenia
+2025-06-03 22:44:55,671 - INFO - Extracted relation: Russia - diplomatic relation - Tajikistan
+2025-06-03 22:44:55,672 - INFO - Extracted relation: Russia - official language - Russian
+2025-06-03 22:44:55,672 - INFO - Extracted relation: Belarus - diplomatic relation - Kazakhstan
+2025-06-03 22:44:55,672 - INFO - Extracted relation: Belarus - official language - Russian
+2025-06-03 22:44:55,673 - INFO - Extracted relation: Kazakhstan - shares border with - Uzbekistan
+2025-06-03 22:44:55,673 - INFO - Extracted relation: Kazakhstan - diplomatic relation - Armenia
+2025-06-03 22:44:55,673 - INFO - Extracted relation: Kazakhstan - official language - Russian
+2025-06-03 22:44:55,673 - INFO - Extracted relation: Uzbekistan - shares border with - Tajikistan
+2025-06-03 22:44:55,673 - INFO - Extracted relation: Uzbekistan - language used - Russian
+2025-06-03 22:44:55,673 - INFO - Extracted relation: Armenia - diplomatic relation - Tajikistan
+2025-06-03 22:44:55,674 - INFO - Extracted relation: Tajikistan - official language - Russian
+2025-06-03 22:45:26,907 - INFO - Extracted relation: John Major - native language - English
+2025-06-03 22:45:40,415 - INFO - Extracted relation: Britain - diplomatic relation - Iraq
+2025-06-03 22:46:15,497 - INFO - Extracted relation: Iraqi - participant - Britain
+2025-06-03 22:46:20,892 - INFO - Extracted relation: Stansted airport - named after - London
+2025-06-03 22:46:20,892 - INFO - Extracted relation: Britain - diplomatic relation - Iraq
+2025-06-03 22:46:21,894 - INFO - Extracted relation: Iraqis - country - Iraq
+2025-06-03 22:46:26,276 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 22:46:26,276 - INFO - Extracted relation: Kurdish - country - Iraq
+2025-06-03 22:46:26,277 - INFO - Extracted relation: Arbil - country - Iraq
+2025-06-03 22:46:32,656 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 22:46:32,657 - INFO - Extracted relation: Arbil - language used - Kurdish
+2025-06-03 22:46:32,657 - INFO - Extracted relation: Arbil - country - Iraq
+2025-06-03 22:46:32,657 - INFO - Extracted relation: Kurdish - country - Iraq
+2025-06-03 22:46:46,855 - INFO - Extracted relation: Bill Clinton - country of citizenship - U.S.
+2025-06-03 22:46:46,856 - INFO - Extracted relation: U.S. - contains the administrative territorial entity - Washington
+2025-06-03 22:46:46,856 - INFO - Extracted relation: U.S. - significant event - Iraqi
+2025-06-03 22:46:46,856 - INFO - Extracted relation: U.S. - diplomatic relation - Iraq
+2025-06-03 22:46:46,856 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 22:47:00,084 - INFO - Extracted relation: Iraq - shares border with - Iran
+2025-06-03 22:47:00,084 - INFO - Extracted relation: Iraq - country - Iraq
+2025-06-03 22:47:00,084 - INFO - Extracted relation: Iraq - official language - Kurdish
+2025-06-03 22:47:00,084 - INFO - Extracted relation: Iran - capital - Tehran
+2025-06-03 22:47:00,084 - INFO - Extracted relation: Iran - shares border with - Iraq
+2025-06-03 22:47:09,194 - INFO - Processed chunk 28/33
+2025-06-03 22:47:24,615 - INFO - Extracted relation: Constand Viljoen - member of political party - Freedom Front
+2025-06-03 22:47:24,615 - INFO - Extracted relation: Freedom Front - headquarters location - Pretoria
+2025-06-03 22:47:32,683 - INFO - Extracted relation: Nelson Mandela - member of political party - African National Congress
+2025-06-03 22:47:51,484 - INFO - Extracted relation: Viljoen - language of work or name - Afrikaans
+2025-06-03 22:47:55,902 - INFO - Extracted relation: Rwandan - country - Zaire
+2025-06-03 22:47:59,958 - INFO - Extracted relation: Rwandan - country - Rwanda
+2025-06-03 22:48:23,008 - INFO - Extracted relation: Zairean - country - Zaire
+2025-06-03 22:48:23,008 - INFO - Extracted relation: Kengo wa Dondo - country of citizenship - Zaire
+2025-06-03 22:48:23,008 - INFO - Extracted relation: Rwanda - official language - Rwandan
+2025-06-03 22:48:23,009 - INFO - Extracted relation: Rwanda - shares border with - Zaire
+2025-06-03 22:48:23,009 - INFO - Extracted relation: Rwandan - country - Zaire
+2025-06-03 22:48:38,497 - INFO - Extracted relation: Rwandan - country - Zaire
+2025-06-03 22:48:38,497 - INFO - Extracted relation: Rwandan - country - Rwanda
+2025-06-03 22:48:38,498 - INFO - Extracted relation: Zaire - shares border with - Tanzania
+2025-06-03 22:48:38,498 - INFO - Extracted relation: Zaire - shares border with - Rwanda
+2025-06-03 22:48:38,498 - INFO - Extracted relation: Tanzania - shares border with - Rwanda
+2025-06-03 22:48:58,661 - INFO - Extracted relation: Bosnia - official language - Serb
+2025-06-03 22:49:28,272 - INFO - Extracted relation: URUS-MARTAN - country - Russia
+2025-06-03 22:50:03,007 - INFO - Extracted relation: Chechnya - official language - Russian
+2025-06-03 22:50:03,007 - INFO - Extracted relation: Moscow - official language - Russian
+2025-06-03 22:50:03,008 - INFO - Extracted relation: Doku Zavgayev - languages spoken, written or signed - Russian
+2025-06-03 22:50:35,319 - INFO - Extracted relation: BRE - country - France
+2025-06-03 22:50:46,000 - INFO - Extracted relation: Zycie Warszawy - language of work or name - Polish
+2025-06-03 22:51:11,246 - INFO - Extracted relation: Polish - country - Poland
+2025-06-03 22:51:15,966 - INFO - Extracted relation: Zycie Warszawy - language of work or name - Polish
+2025-06-03 22:51:48,772 - INFO - Processed chunk 29/33
+2025-06-03 22:51:52,695 - INFO - Extracted relation: Cuba - contains the administrative territorial entity - Granma
+2025-06-03 22:52:13,938 - INFO - Extracted relation: U.N. - founded by - Chile
+2025-06-03 22:52:39,171 - INFO - Extracted relation: U.S. - diplomatic relation - Chile
+2025-06-03 22:52:39,171 - INFO - Extracted relation: U.S. - member of - Security Council
+2025-06-03 22:52:45,617 - INFO - Extracted relation: Jose Miguel Insulza - country of citizenship - Chile
+2025-06-03 22:52:45,617 - INFO - Extracted relation: Chile - diplomatic relation - U.S.
+2025-06-03 22:52:45,618 - INFO - Extracted relation: the United States - diplomatic relation - Chile
+2025-06-03 22:52:48,636 - INFO - Extracted relation: Uruguay - diplomatic relation - Chile
+2025-06-03 22:52:53,311 - INFO - Extracted relation: Bolivia - contains the administrative territorial entity - Cochabamba
+2025-06-03 22:52:56,720 - INFO - Extracted relation: Honduras - shares border with - Guatemala
+2025-06-03 22:52:58,731 - INFO - Extracted relation: Mexican - contains the administrative territorial entity - Michoacan
+2025-06-03 22:52:59,405 - INFO - Extracted relation: Mexican - contains the administrative territorial entity - Michoacan
+2025-06-03 22:53:08,449 - INFO - Extracted relation: Tacambaro - located in the administrative territorial entity - Michoacan
+2025-06-03 22:53:08,450 - INFO - Extracted relation: Michoacan - capital - Morelia
+2025-06-03 22:53:22,572 - INFO - Extracted relation: Popular Revolutionary Army - country - Mexican
+2025-06-03 22:54:31,571 - INFO - Extracted relation: Suu Kyi - place of birth - Rangoon
+2025-06-03 22:54:40,878 - INFO - Extracted relation: Suu Kyi - country of citizenship - Burma
+2025-06-03 22:55:06,920 - INFO - Extracted relation: The Dow Chemical Co - country - the United States
+2025-06-03 22:55:06,920 - INFO - Extracted relation: the United States - diplomatic relation - China
+2025-06-03 22:55:21,961 - INFO - Extracted relation: Tianjin - country - China
+2025-06-03 22:55:25,106 - INFO - Extracted relation: N. Korea - shares border with - S. Korea
+2025-06-03 22:55:27,728 - INFO - Extracted relation: North Korea - shares border with - South Korea
+2025-06-03 22:55:27,728 - INFO - Extracted relation: South Korea - capital - Seoul
+2025-06-03 22:56:06,812 - INFO - Processed chunk 30/33
+2025-06-03 22:56:18,919 - INFO - Extracted relation: Hangzhou - located in the administrative territorial entity - Zhejiang
+2025-06-03 22:56:46,211 - INFO - Extracted relation: Chinese - country - Nationalist
+2025-06-03 22:56:46,211 - INFO - Extracted relation: Chinese - country - China
+2025-06-03 22:56:46,211 - INFO - Extracted relation: Nationalist - shares border with - China
+2025-06-03 22:56:46,212 - INFO - Extracted relation: Nationalist - located in/on physical feature - Taiwan
+2025-06-03 22:56:49,251 - INFO - Extracted relation: Wuhan - located in the administrative territorial entity - Hubei
+2025-06-03 22:56:51,648 - INFO - Extracted relation: Guangzhou - located in the administrative territorial entity - Guangdong
+2025-06-03 22:57:01,606 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 22:57:01,606 - INFO - Extracted relation: Kurds - languages spoken, written or signed - Iranian
+2025-06-03 22:57:01,607 - INFO - Extracted relation: Kurds - country of origin - Iraq
+2025-06-03 22:57:01,607 - INFO - Extracted relation: Iranian - country - Iraq
+2025-06-03 22:57:14,446 - INFO - Extracted relation: Iranian - country - Iraq
+2025-06-03 22:57:14,447 - INFO - Extracted relation: Kurdish - country - Iraq
+2025-06-03 22:57:14,447 - INFO - Extracted relation: Iraq - capital - Baghdad
+2025-06-03 22:57:14,447 - INFO - Extracted relation: Iraq - official language - Kurdish
+2025-06-03 22:57:14,447 - INFO - Extracted relation: Baghdad - official language - Kurdish
+2025-06-03 22:57:31,232 - INFO - Extracted relation: Iranian - country - Iraq
+2025-06-03 22:57:40,909 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 22:57:40,910 - INFO - Extracted relation: U.S. - significant event - Iraqi
+2025-06-03 22:57:40,910 - INFO - Extracted relation: Bill Clinton - country of citizenship - U.S.
+2025-06-03 22:57:55,486 - INFO - Extracted relation: Turkey - ethnic group - Kurds
+2025-06-03 22:58:09,610 - INFO - Extracted relation: Israel - shares border with - Lebanon
+2025-06-03 22:58:09,611 - INFO - Extracted relation: Israel - diplomatic relation - Islamic
+2025-06-03 22:58:09,611 - INFO - Extracted relation: Hizbollah - country - Lebanon
+2025-06-03 22:58:09,611 - INFO - Extracted relation: Lebanon - diplomatic relation - Islamic
+2025-06-03 22:58:31,811 - INFO - Extracted relation: Israel - shares border with - Lebanon
+2025-06-03 22:58:31,811 - INFO - Extracted relation: Israel - shares border with - Syria
+2025-06-03 22:58:31,812 - INFO - Extracted relation: Israel - diplomatic relation - France
+2025-06-03 22:58:31,812 - INFO - Extracted relation: Israel - diplomatic relation - the United States
+2025-06-03 22:58:31,812 - INFO - Extracted relation: Lebanon - shares border with - Syria
+2025-06-03 22:58:31,812 - INFO - Extracted relation: Lebanon - diplomatic relation - France
+2025-06-03 22:58:31,813 - INFO - Extracted relation: Lebanon - diplomatic relation - the United States
+2025-06-03 22:58:31,813 - INFO - Extracted relation: Syria - diplomatic relation - France
+2025-06-03 22:58:31,813 - INFO - Extracted relation: Syria - diplomatic relation - the United States
+2025-06-03 22:58:31,813 - INFO - Extracted relation: France - diplomatic relation - the United States
+2025-06-03 22:58:42,988 - INFO - Extracted relation: Hizbollah - designated as terrorist by - Israel
+2025-06-03 22:59:09,139 - INFO - Extracted relation: Kurdistan Democratic Party - chairperson - Massoud Barzani
+2025-06-03 22:59:09,140 - INFO - Extracted relation: Kurdistan Democratic Party - headquarters location - Arbil
+2025-06-03 22:59:09,140 - INFO - Extracted relation: Massoud Barzani - participated in conflict - Iraqi
+2025-06-03 22:59:25,707 - INFO - Extracted relation: Iraq - capital - Baghdad
+2025-06-03 22:59:34,781 - INFO - Extracted relation: Iraq - country - Iraq
+2025-06-03 22:59:34,781 - INFO - Extracted relation: Iraq - official language - Kurdish
+2025-06-03 22:59:34,782 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 23:00:27,883 - INFO - Extracted relation: Iraq - diplomatic relation - U.S.
+2025-06-03 23:00:27,883 - INFO - Extracted relation: Iraq - capital - Baghdad
+2025-06-03 23:00:27,884 - INFO - Extracted relation: Iraq - shares border with - Iran
+2025-06-03 23:00:27,884 - INFO - Extracted relation: U.S. - significant event - Iraqi
+2025-06-03 23:00:27,884 - INFO - Extracted relation: Kurds - country of origin - Iran
+2025-06-03 23:00:36,968 - INFO - Extracted relation: United Nations - founded by - Iraq
+2025-06-03 23:00:36,968 - INFO - Extracted relation: Arbil - country - Iraq
+2025-06-03 23:00:36,968 - INFO - Extracted relation: Arbil - language used - Kurdish
+2025-06-03 23:00:36,969 - INFO - Extracted relation: Iraq - official language - Kurdish
+2025-06-03 23:00:50,105 - INFO - Extracted relation: Tunisia - diplomatic relation - France
+2025-06-03 23:00:50,105 - INFO - Extracted relation: Tunisia - country - Tunisia
+2025-06-03 23:00:50,105 - INFO - Extracted relation: France - diplomatic relation - Tunisia
+2025-06-03 23:00:50,105 - INFO - Extracted relation: France - country - France
+2025-06-03 23:00:58,235 - INFO - Processed chunk 31/33
+2025-06-03 23:01:05,071 - INFO - Extracted relation: Interstate 5 - located in the administrative territorial entity - California
+2025-06-03 23:01:22,559 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 23:01:22,560 - INFO - Extracted relation: U.S. - significant event - Iraqi
+2025-06-03 23:01:22,560 - INFO - Extracted relation: U.S. - diplomatic relation - Iraq
+2025-06-03 23:01:22,560 - INFO - Extracted relation: Bill Clinton - country of citizenship - U.S.
+2025-06-03 23:01:22,561 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 23:01:22,561 - INFO - Extracted relation: Iraqi - participant - U.S.
+2025-06-03 23:01:22,561 - INFO - Extracted relation: Iraq - diplomatic relation - U.S.
+2025-06-03 23:01:27,610 - INFO - Extracted relation: Carl Vinson - country of citizenship - the United States
+2025-06-03 23:01:39,624 - INFO - Extracted relation: U.S. - significant event - Iraqi
+2025-06-03 23:01:39,624 - INFO - Extracted relation: U.S. - diplomatic relation - Iraq
+2025-06-03 23:01:39,624 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 23:01:39,625 - INFO - Extracted relation: Kurdish - country - Iraq
+2025-06-03 23:01:44,453 - INFO - Extracted relation: U.S. - diplomatic relation - Iraq
+2025-06-03 23:01:48,471 - INFO - Extracted relation: Arbil - language used - Kurdish
+2025-06-03 23:01:48,471 - INFO - Extracted relation: Kurdish - country - Iran
+2025-06-03 23:01:48,472 - INFO - Extracted relation: Iran - shares border with - Iraq
+2025-06-03 23:01:48,472 - INFO - Extracted relation: Iraq - country - Iraq
+2025-06-03 23:01:48,472 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 23:01:48,472 - INFO - Extracted relation: U.S. - significant event - Iraqi
+2025-06-03 23:01:48,473 - INFO - Extracted relation: Iraqi - participant - U.S.
+2025-06-03 23:02:19,377 - INFO - Extracted relation: F-14 - country - U.S.
+2025-06-03 23:02:19,377 - INFO - Extracted relation: F-16 - country - U.S.
+2025-06-03 23:02:19,377 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 23:02:26,802 - INFO - Extracted relation: U.S. - country - U.S.
+2025-06-03 23:02:26,802 - INFO - Extracted relation: U.S. - diplomatic relation - Saudi Arabia
+2025-06-03 23:02:26,803 - INFO - Extracted relation: Saudi Arabia - diplomatic relation - U.S.
+2025-06-03 23:02:36,603 - INFO - Extracted relation: Marc Dutroux - country of citizenship - Belgium
+2025-06-03 23:03:21,413 - INFO - Extracted relation: Tehran - official language - Iranian
+2025-06-03 23:03:21,414 - INFO - Extracted relation: Tehran - twinned administrative body - Berlin
+2025-06-03 23:03:26,479 - INFO - Extracted relation: Iran - diplomatic relation - Germany
+2025-06-03 23:03:26,479 - INFO - Extracted relation: Germany - capital - Berlin
+2025-06-03 23:04:21,610 - INFO - Extracted relation: Rome - official language - Italian
+2025-06-03 23:04:21,611 - INFO - Extracted relation: U.S. - diplomatic relation - Burundi
+2025-06-03 23:04:21,612 - INFO - Extracted relation: Burundi - country - Burundi
+2025-06-03 23:04:31,688 - INFO - Extracted relation: Pierre Buyoya - family name - Buyoya
+2025-06-03 23:04:47,245 - INFO - Extracted relation: Iraqi - named after - Iraq
+2025-06-03 23:04:47,245 - INFO - Extracted relation: Kurd - country of origin - Iraq
+2025-06-03 23:04:47,245 - INFO - Extracted relation: Kurdistan Democratic Party - headquarters location - Arbil
+2025-06-03 23:04:47,246 - INFO - Extracted relation: Kurdistan Democratic Party - country - Iraq
+2025-06-03 23:04:47,246 - INFO - Extracted relation: Arbil - country - Iraq
+2025-06-03 23:04:47,358 - INFO - Processed chunk 32/33
+2025-06-03 23:05:07,141 - INFO - Extracted relation: Marc Dutroux - country of citizenship - Belgium
+2025-06-03 23:05:27,640 - INFO - Extracted relation: Britain - language used - British
+2025-06-03 23:05:27,640 - INFO - Extracted relation: Britain - contains the administrative territorial entity - Northern Ireland
+2025-06-03 23:05:55,087 - INFO - Extracted relation: Mao Tse- - country of citizenship - China
+2025-06-03 23:05:55,088 - INFO - Extracted relation: China - diplomatic relation - Israel
+2025-06-03 23:05:55,088 - INFO - Extracted relation: Yitzak Shamir - country of citizenship - Israel
+2025-06-03 23:06:26,484 - INFO - Processed chunk 33/33
+2025-06-03 23:06:26,486 - INFO - Processing completed. Results saved to output/relations_valid.json

@@ -19,7 +19,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('wikidata_processing.log'),
+        logging.FileHandler('wikidata_processing_valid.log'),
         logging.StreamHandler()
     ]
 )
@@ -51,7 +51,7 @@ class RateLimiter:
     
     def _init_limiter(self):
         self.last_request_time = 0
-        self.min_interval = 1.2  # 秒 (略高于Wikidata的1请求/秒限制)
+        self.min_interval = 1  # 秒 (略高于Wikidata的1请求/秒限制)
         self.lock = Lock()
     
     def wait_for_next_request(self):
@@ -85,7 +85,7 @@ class WikidataSession:
         
         # 设置用户代理(遵守Wikidata要求)
         self.session.headers.update({
-            'User-Agent': 'AcademicResearchBot/1.0 (your_email@example.com)',
+            'User-Agent': 'AcademicResearchBot/1.0 ',
             'Accept': 'application/json'
         })
     
@@ -327,7 +327,7 @@ def main():
     ds_extractor = DistantSupervisionRelationExtractor(nlp)
     
     logger.info("Loading entities from JSON...")
-    entities_data = load_entities_from_json("output/entities.json")
+    entities_data = load_entities_from_json("output/entities_valid.json")
     
     results = []
     
@@ -360,7 +360,7 @@ def main():
         # 保存当前块结果
         output_dir = Path("output")
         output_dir.mkdir(exist_ok=True)
-        output_file = output_dir / "relations_with_entities.json"
+        output_file = output_dir / "relations_valid.json"
         
         # 处理JSON文件写入方式
         if not output_file.exists():
@@ -375,7 +375,7 @@ def main():
         
         logger.info(f"Processed chunk {i//CHUNK_SIZE + 1}/{(len(entities_data)-1)//CHUNK_SIZE + 1}")
     
-    logger.info(f"Processing completed. Results saved to output/relations_with_entities.json")
+    logger.info(f"Processing completed. Results saved to output/relations_valid.json")
 
 if __name__ == "__main__":
     main()

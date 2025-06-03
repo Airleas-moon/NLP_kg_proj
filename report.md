@@ -27,3 +27,10 @@
 尝试更大更精确的模型en_core_web_trf后，结果变精确了。
 
 { "sentence": "U.N. official Ekeus heads for Baghdad .","entities": [["U.N.","ORG"],["Ekeus", "PER" ],   [   "Baghdad",    "LOC"   ]  ] },
+
+
+
+使用三元组分割测试集跑出来的model_comparison
+
+![image-20250603191115050](C:\Users\studying\AppData\Roaming\Typora\typora-user-images\image-20250603191115050.png)
+
