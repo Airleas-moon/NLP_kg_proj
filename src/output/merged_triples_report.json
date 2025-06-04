@@ -1,0 +1,41 @@
+{
+  "conflict_statistics": {
+    "total_conflicts": 16,
+    "by_type": {
+      "uniqueness_violation": 16
+    },
+    "top_conflict_relations": [
+      [
+        "country of citizenship",
+        6
+      ],
+      [
+        "country",
+        6
+      ],
+      [
+        "member of sports team",
+        4
+      ]
+    ]
+  },
+  "conflict_examples": {
+    "uniqueness_violation": [
+      [
+        "Chris Witty",
+        "country of citizenship",
+        "US"
+      ],
+      [
+        "Chris Witty",
+        "country of citizenship",
+        "U.S."
+      ],
+      [
+        "Italians",
+        "country",
+        "Belgium"
+      ]
+    ]
+  }
+}
