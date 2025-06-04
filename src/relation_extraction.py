@@ -24,7 +24,7 @@ logging.basicConfig(
     ]
 )
 
-os.environ["CUDA_VISIBLE_DEVICES"] = ""  # 确保不使用GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "" 
 logger = logging.getLogger(__name__)
 logger.info("Running on CPU")
 
