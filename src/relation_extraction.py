@@ -51,7 +51,7 @@ class RateLimiter:
     
     def _init_limiter(self):
         self.last_request_time = 0
-        self.min_interval = 1  # 秒 (略高于Wikidata的1请求/秒限制)
+        self.min_interval = 1  
         self.lock = Lock()
     
     def wait_for_next_request(self):
@@ -64,7 +64,6 @@ class RateLimiter:
             self.last_request_time = time.time()
 
 class WikidataSession:
-    """自定义Wikidata会话管理，包含自动重试和持久化连接"""
     def __init__(self):
         self.session = requests.Session()
         self.rate_limiter = RateLimiter()
@@ -72,18 +71,18 @@ class WikidataSession:
         # 配置自动重试策略
         retry_strategy = Retry(
             total=3,
-            backoff_factor=1,  # 增加退避因子
+            backoff_factor=1, 
             status_forcelist=[408, 429, 500, 502, 503, 504],
             allowed_methods=["HEAD", "GET", "OPTIONS"]
         )
         adapter = HTTPAdapter(
             max_retries=retry_strategy,
-            pool_maxsize=4,  # 限制连接池大小
-            pool_block=True  # 启用阻塞模式
+            pool_maxsize=4,  
+            pool_block=True  
         )
         self.session.mount("https://", adapter)
         
-        # 设置用户代理(遵守Wikidata要求)
+        
         self.session.headers.update({
             'User-Agent': 'AcademicResearchBot/1.0 ',
             'Accept': 'application/json'
@@ -97,7 +96,7 @@ class WikidataSession:
             response = self.session.get(url, params=params, timeout=timeout)
             response.raise_for_status()
             
-            # 检查Wikidata返回的错误
+            
             if response.status_code == 429:
                 retry_after = int(response.headers.get('Retry-After', 30))
                 logger.warning(f"Rate limited. Waiting {retry_after} seconds")

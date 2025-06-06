@@ -4,11 +4,14 @@
 
 #### 项目结构
 
+
+
+```python
 /KG_project
 │
 ├── data/
-│   ├── raw/          # 原始数据集
-│   └── processed/    # 处理后的三元组
+|   └── raw/          # 原始数据集
+│   
 │
 ├── src/
 │   ├── entity_extraction.py
@@ -17,6 +20,7 @@
 │
 ├── requirements.txt
 └── report.md     #报告
+```
 
 
 
@@ -30,7 +34,8 @@
 
 
 
-使用三元组分割测试集跑出来的model_comparison
+![image-20250604211247788](C:\Users\studying\AppData\Roaming\Typora\typora-user-images\image-20250604211247788.png)
 
 ![image-20250603191115050](C:\Users\studying\AppData\Roaming\Typora\typora-user-images\image-20250603191115050.png)
 
+![image-20250604211347350](C:\Users\studying\AppData\Roaming\Typora\typora-user-images\image-20250604211347350.png)

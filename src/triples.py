@@ -10,7 +10,7 @@ def extract_all_triples(json_data):
     return triples
 
 if __name__ == "__main__":
-    with open("output/relations_valid.json", "r", encoding="utf-8") as f:
+    with open("output/relations_with_entities.json", "r", encoding="utf-8") as f:
         json_data = json.load(f)
     
     triples = extract_all_triples(json_data)
@@ -20,6 +20,6 @@ if __name__ == "__main__":
     for triple in triples[:10]:  
         print(triple)
     
-    with open("output/triples_valid.json", "w", encoding="utf-8") as f:
+    with open("output/triples_train.json", "w", encoding="utf-8") as f:
         json.dump(triples, f, indent=2, ensure_ascii=False)
     print("\n已保存到 triples_test.json")
